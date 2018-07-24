@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import HomePage from './src/home/HomePage.js'
-import SearchPage from './src/Search/SearchPage.js'
+import SearchPage from './src/search/SearchPage.js'
 import ClubPage from './src/club/ClubPage.js'
 import ClubCalendarPage from './src/club/ClubCalendarPage.js'
 import ClubStoriesPage from './src/club/ClubStoriesPage.js'
@@ -12,9 +12,12 @@ import PersonalPage from './src/personal/PersonalPage.js'
 import PersonalPWDPage from './src/personal/PersonalPWDPage.js'
 import PersonalMailPage from './src/personal/PersonalMailPage.js'
 import PersonalGroupPage from './src/personal/PersonalGroupPage.js'
-import SignInPage from './src/sign/SignInPage.js'
-import SignUpPage from './src/sign/SignUpPage.js'
-import SignMailPage from './src/sign/SignMailPage.js'
+import ChangePsdPage from './src/login/ChangePsdPage'
+import EmailVerifyPage from './src/login/EmailVerifyPage'
+import ForgotEmailPage from './src/login/ForgotEmailPage'
+import LoginPage from './src/login/LoginPage'
+import NickNamePage from './src/login/NickNamePage'
+import RegisteredPage from './src/login/RegisteredPage'
 
 
 export default class App extends React.Component {
@@ -32,9 +35,12 @@ export default class App extends React.Component {
       // <PersonalPWDPage />
       // <PersonalMailPage />
       // <PersonalGroupPage />
-      // <SignInPage />
-      // <SignUpPage />
-      // <SignMailPage />
+      // <ChangePsdPage />
+      // <EmailVerifyPage />
+      // <ForgotEmailPage />
+      // <LoginPage />
+      // <NickNamePage />
+      // <RegisteredPage />
     );
   }
 }
