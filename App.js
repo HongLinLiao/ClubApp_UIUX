@@ -14,7 +14,7 @@ import PersonalMailPage from './src/personal/PersonalMailPage.js'
 import PersonalGroupPage from './src/personal/PersonalGroupPage.js'
 import ChangePsdPage from './src/login/ChangePsdPage'
 import EmailVerifyPage from './src/login/EmailVerifyPage'
-import ForgotEmailPage from './src/login/ForgotEmailPage'
+import ForgotPswPage from './src/login/ForgotPswPage'
 import LoginPage from './src/login/LoginPage'
 import NickNamePage from './src/login/NickNamePage'
 import RegisteredPage from './src/login/RegisteredPage'
@@ -37,7 +37,7 @@ export default class App extends React.Component {
       // <PersonalGroupPage />
       // <ChangePsdPage />
       // <EmailVerifyPage />
-      // <ForgotEmailPage />
+      // <ForgotPswPage />
       // <LoginPage />
       // <NickNamePage />
       // <RegisteredPage />

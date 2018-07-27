@@ -18,17 +18,15 @@ render(){
     imageStyle={{ resizeMode: 'cover' }}
   >
     <View style={styles.container}>
-          <Text style={styles.title}>重設密碼</Text>
-          <Text style={styles.enter}>輸入新密碼</Text>
+       
+          <Text style={styles.title}>忘記密碼</Text>
+          <Text style={styles.enter}>輸入驗證碼</Text>
           <TextInput
             style={styles.textInput}
-            secureTextEntry={true}
             underlineColorAndroid={'transparent'}/>
-            <Text style={styles.enter}>再次輸入新密碼</Text>
-          <TextInput
-            style={styles.textInput}
-	    secureTextEntry={true}
-            underlineColorAndroid={'transparent'}/>
+            <TouchableOpacity style={styles.againbotton}>
+            <Text style={styles.nexttext}>發送驗證碼至註冊信箱</Text>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.nextbotton}>
             <Text style={styles.nexttext}>確認</Text>
           </TouchableOpacity>
@@ -36,7 +34,7 @@ render(){
             <Text style={styles.nexttext}>返回</Text>
           </TouchableOpacity>
           <KeyboardAvoidingView behavior='padding'>
-      </KeyboardAvoidingView> 
+      </KeyboardAvoidingView>
     </View>
     </ImageBackground>
   );
@@ -72,6 +70,15 @@ const styles = StyleSheet.create({
     width:230,
     height:35,
     backgroundColor:'rgba(255,255,255,0.2)',
+    borderRadius:5
+  },
+  againbotton:{
+    backgroundColor:'rgba(255,255,255,0.2)',
+    margin:15,
+    borderWidth:1,
+    borderColor:'white',
+    width:230,
+    height:35,
     borderRadius:5
   },
   nextbotton:{
