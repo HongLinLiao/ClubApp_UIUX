@@ -12,7 +12,6 @@ import PersonalPage from './src/personal/PersonalPage.js'
 import PersonalPWDPage from './src/personal/PersonalPWDPage.js'
 import PersonalMailPage from './src/personal/PersonalMailPage.js'
 import PersonalGroupPage from './src/personal/PersonalGroupPage.js'
-import ChangePsdPage from './src/login/ChangePsdPage'
 import EmailVerifyPage from './src/login/EmailVerifyPage'
 import ForgotPswPage from './src/login/ForgotPswPage'
 import LoginPage from './src/login/LoginPage'
@@ -35,7 +34,6 @@ export default class App extends React.Component {
       // <PersonalPWDPage />
       // <PersonalMailPage />
       // <PersonalGroupPage />
-      // <ChangePsdPage />
       // <EmailVerifyPage />
       // <ForgotPswPage />
       // <LoginPage />

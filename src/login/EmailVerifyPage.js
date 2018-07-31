@@ -3,7 +3,6 @@ import { Text,
          View, 
          StyleSheet,
          KeyboardAvoidingView,
-         TextInput,
          TouchableOpacity,
          ImageBackground
          } from 'react-native';
@@ -19,18 +18,16 @@ render(){
   >
     <View style={styles.container}> 
           <Text style={styles.title}>信箱驗證</Text>
-          <Text style={styles.enter}>驗證碼輸入</Text>
-          <TextInput
-            style={styles.textInput}
-            underlineColorAndroid={'transparent'}/>
-          <TouchableOpacity style={styles.againbotton}>
-            <Text style={styles.nexttext}>再次發送驗證碼</Text>
+          <Text style={styles.send}>已寄驗證信至</Text>
+          <Text style={styles.mail}>abc123@iclub.com</Text>
+          <TouchableOpacity style={styles.againBotton}>
+            <Text style={styles.againText}>再次發送驗證信</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.nextbotton}>
-            <Text style={styles.nexttext}>登入</Text>
+          <TouchableOpacity style={styles.loginBotton}>
+            <Text style={styles.loginText}>登入</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.nexttext}>返回</Text>
+            <Text style={styles.backText}>返回</Text>
           </TouchableOpacity>
           <KeyboardAvoidingView behavior='padding'>
           </KeyboardAvoidingView> 
@@ -54,45 +51,58 @@ const styles = StyleSheet.create({
   },
   title:{
     color:'white',
-    fontSize:30,
+    fontSize:40,
     alignSelf: 'center',
-    padding:40
+    padding:55
   },
-  enter:{
+  send:{
     color:'white',
-    fontSize:15,
+    fontSize:20,
     alignSelf: 'center',
     padding:5
   },
-  textInput:{
-    marginBottom:15,
-    width:230,
-    height:35,
-    backgroundColor:'rgba(255,255,255,0.2)',
-    borderRadius:5
+  mail:{
+    color:'white',
+    fontSize:25,
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    padding:5
   },
-  againbotton:{
+  againBotton:{
     backgroundColor:'rgba(255,255,255,0.2)',
-    margin:15,
+    margin:35,
     borderWidth:1,
     borderColor:'white',
     width:230,
-    height:35,
-    borderRadius:5
+    height:40,
+    borderRadius:5,
+    justifyContent:'center'
   },
-  nextbotton:{
+  againText:{
+    color:'white',
+    fontSize:20,
+    alignSelf: 'center'
+  },
+  loginBotton:{
     backgroundColor:'rgba(255,255,255,0)',
     margin:30,
     borderWidth:1,
     borderColor:'white',
     width:150,
-    height:35,
-    borderRadius: 50
+    height:40,
+    borderRadius: 50,
+    justifyContent:'center'
   },
-  nexttext:{
+  loginText:{
     color:'white',
-    fontSize:15,
+    fontSize:20,
+    alignSelf: 'center'
+  },
+  backText:{
+    color:'white',
+    fontSize:20,
     alignSelf: 'center',
-    paddingTop:5
+    paddingTop:20
   }
+ 
 })

@@ -23,11 +23,11 @@ render(){
           <TextInput
             style={styles.textInput}
             underlineColorAndroid={'transparent'}/>
-          <TouchableOpacity style={styles.nextbotton}>
-            <Text style={styles.nexttext}>確認</Text>
+          <TouchableOpacity style={styles.okBotton}>
+            <Text style={styles.okText}>確認</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.nexttext}>返回</Text>
+            <Text style={styles.backText}>返回</Text>
           </TouchableOpacity>
           <KeyboardAvoidingView behavior='padding'>
       </KeyboardAvoidingView> 
@@ -43,23 +43,23 @@ bf:{
   height:null,
   width:null
 },
- container:{
+  container:{
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection:'column'
   },
-title:{
+  title:{
     color:'white',
-    fontSize:30,
+    fontSize:40,
     alignSelf: 'center',
-    padding:40
+    paddingBottom:90
   },
   enter:{
     color:'white',
-    fontSize:15,
+    fontSize:20,
     alignSelf: 'center',
-    padding:5
+    padding:10
   },
   textInput:{
     marginBottom:15,
@@ -68,19 +68,25 @@ title:{
     backgroundColor:'rgba(255,255,255,0.2)',
     borderRadius:5
   },
-  nextbotton:{
+  okBotton:{
     backgroundColor:'rgba(255,255,255,0)',
-    margin:30,
+    margin:60,
     borderWidth:1,
     borderColor:'white',
     width:150,
-    height:35,
-    borderRadius: 50
+    height:40,
+    borderRadius: 50,
+    justifyContent:'center'
   },
-  nexttext:{
+  okText:{
     color:'white',
-    fontSize:15,
+    fontSize:20,
+    alignSelf: 'center'
+  },
+  backText:{
+    color:'white',
+    fontSize:20,
     alignSelf: 'center',
-    paddingTop:5
+    paddingTop:10
   }
 })
