@@ -24,7 +24,7 @@ export default class App extends React.Component {
   render() {
     return (
       // <HomePage />
-      // <SearchPage />
+       <SearchPage />
       // <ClubPage />
       // <ClubCalendarPage />
       // <ClubStoriesPage />

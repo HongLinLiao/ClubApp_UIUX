@@ -4,81 +4,63 @@ import { Text, View, StyleSheet ,ScrollView,
 
 import { Constants } from 'expo';
 import { Button ,SearchBar,Icon} from 'react-native-elements';
-
+import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
+ 
 
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.top}></View>
-        <View style={styles.thescroll}>
-          <ScrollView contentContainerStyle={styles.contentContainer}>
-            <View style={styles.search} > 
+      <StatusBarPaddingIOS style={{backgroundColor: '#8080c0'}}/>
+      <ScrollView>
+         
               <SearchBar  
-              style={{alignItems:'stretch'}}
+              containerStyle={styles.srarchBar}
+              inputStyle={styles.searchInput}
               icon={{ type: 'font-awesome', name: 'search' }}
-              placeholder='搜尋             '/>
-            </View>
-            
-            <View style={styles.content}>
-              <View style={styles.searchcontent}>
-                <ImageBackground source={{uri: 'https://facebook.github.io/react/logo-og.png'}}
-                style={{height:'100%',width:'100%',}} >
-                <View style={{flexGrow:1,flexDirection:'row',
-                alignItems:'flex-end', 
-                justifyContent:'flex-end',}}>
-                  <Text style={{color:'#ffffff', fontSize:20, fontWeight:'bold'}}>社團名稱</Text>
-                  <Button buttonStyle={{height:40,width:40,backgroundColor:'#ded1b0',
-                borderRadius:30}}
-                title='GO'></Button>
-                
+              placeholder='搜尋'/>
+           
+        <View styles={styles.searchView}>
+
+            <View style={styles.searchConL}>
+                <View style={styles.clubText}>
+                    <Text style={styles.clubNameText}>長庚大學狗醫師社</Text>
+                    <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>
-                </ImageBackground>
-
-                
-                
-                
-              </View>
-              <View style={styles.searchcontent}></View>
-              <View style={styles.searchcontent}></View>
-              <View></View>
-
+                <View style={styles.clubHead}>
+                </View>
             </View>
-          </ScrollView>
+            <View style={styles.searchConR}>
+                <View style={styles.clubHead}>
+                </View>
+                <View style={styles.clubText}>
+                  <Text style={styles.clubNameText}>長庚大學熱舞社</Text>
+                  <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                </View>          
+              </View>
+              <View style={styles.searchConL}>
+                <View style={styles.clubText}>
+                    <Text style={styles.clubNameText}>長庚大學狗醫師社</Text>
+                    <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                </View>
+                <View style={styles.clubHead}>
+                </View>
+            </View>
+            <View style={styles.searchConR}>
+                <View style={styles.clubHead}>
+                </View>
+                <View style={styles.clubText}>
+                  <Text style={styles.clubNameText}>長庚大學熱舞社</Text>
+                  <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                </View>          
+              </View>
         </View>
+        </ScrollView>    
+            
 
-        <View style={styles.guide}>
-          <View style={styles.gu}>
-          <Button buttonStyle={{height:80,width:80,
-            justifyContent:'center',
-            alignItems:'center',
-            backgroundColor:'transparent'}} icon={{name:'person'}}/>
-          </View>
-          <View style={styles.gu}>
-          <Button buttonStyle={{height:80,width:80,
-            justifyContent:'center',
-            alignItems:'center',
-            backgroundColor:'transparent'}} icon={{name:'search'}}/>
-          </View>
-          <View style={styles.gu}>
-          <Button buttonStyle={{height:80,width:80,
-            justifyContent:'center',
-            alignItems:'center',
-            backgroundColor:'transparent'}} icon={{name:'home'}}/>
-          </View>
-          <View style={styles.gu}>
-          <Button buttonStyle={{height:80,width:80,
-            justifyContent:'center',
-            alignItems:'center',
-            backgroundColor:'transparent'}} icon={{name:'chat'}}/>
-          </View>
-          <View style={styles.gu}>
-          <Button buttonStyle={{height:'100%',width:'100%',
-            justifyContent:'center',
-            alignItems:'center',
-            backgroundColor:'transparent'}} icon={{name:'people'}}/>
-          </View>
+        <View style={styles.tabBar}>
+          
         </View>
       </View>
       
@@ -92,69 +74,72 @@ const styles = StyleSheet.create({
     flex:1,
     flexDirection: 'column',
   },
-  top:{
-    flex:1,
-    backgroundColor:'#c7a8ae',
-  },
-  thescroll:{
-    flex:10
-  },
-  contentContainer: {
-      
-      flex:9
-    },
  
-  
-  content:{
-    flex:12,
-    backgroundColor:'#f0f0f0',
-    borderWidth:2,
-    borderColor:'#ccd0c2',
-    
+
+  searchBar:{
+      width:'100%',
+      backgroundColor: '#123456',
   },
-  search:{
-    flex:1,
-    //borderWidth:1,
-    
-    //backgroundColor:'#7F00DB',
+  searchInput:{
+    backgroundColor: '#f3e1ce',
+  },
+  searchView:{
+    flex:15,
+  },
+  searchConL:{
+    height:140,
+    backgroundColor:'#ffaf60',
     flexDirection:'row',
-    //alignItems:'stretch',
+    borderTopRightRadius:100,
+    borderBottomRightRadius:100,
     justifyContent:'center',
+    alignItems: 'center',
+    shadowOffset:{ width: 5, height: 5, },
+    shadowColor:'#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.5
+  },
+  searchConR:{
+    height:140,
+    backgroundColor:'#82d900',
+    flexDirection:'row',
+    borderTopLeftRadius:100,
+    borderBottomLeftRadius:100,
+    justifyContent:'center',
+    alignItems: 'center',
+    shadowOffset:{ width: 5, height: 5, },
+    shadowColor:'#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.5
+  },
+  clubHead:{
+    backgroundColor:'#4f4f4f',
+    borderRadius:100,
+    width:100,
+    height:100,
+    shadowRadius:10,
+    shadowOffset:{ width: 5, height: 5, },
+    shadowColor:'#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
 
   },
-  
-  
+  clubText:{
+      padding:20
+  },
+clubNameText:{
+    fontSize:20,
+},
+clubIntroText:{
+    padding:8
+},
+  tabBar:{
+    height:50,
+    backgroundColor:'#8080c0',
+   
+    
+  },
 
-  page:{
-    flex:1,
-    flexDirection:'row',
-      
-  },
-  searchcontent:{
-    flex:1,
-    borderColor:'#D4D4D4',
-    borderWidth:1, 
-    
-  },
-  guide:{
-    flex:1,
-    backgroundColor:'#c7a8ae',
-    flexDirection:'row',
-    justifyContent:'center',
-    alignItems:'flex-start',
-    
-  },
-  gu:{
-    flex:1,
-    borderRadius:10,
-    height:55,
-    justifyContent:'center',
-    alignItems:'center',
-    backgroundColor:'#f2bb64',
-    borderWidth:2,
-    borderColor:'#80786b',
-    
-  },
  
 
 });
