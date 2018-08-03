@@ -12,11 +12,11 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <StatusBarPaddingIOS style={{backgroundColor: '#8080c0'}}/>
+      <StatusBarPaddingIOS style={{backgroundColor: '#ece289'}}/>
       <ScrollView>
          
               <SearchBar  
-              containerStyle={styles.srarchBar}
+              containerStyle={styles.srarchBar}//外框顏色無法
               inputStyle={styles.searchInput}
               icon={{ type: 'font-awesome', name: 'search' }}
               placeholder='搜尋'/>
@@ -25,36 +25,56 @@ export default class App extends Component {
 
             <View style={styles.searchConL}>
                 <View style={styles.clubText}>
-                    <Text style={styles.clubNameText}>長庚大學狗醫師社</Text>
+                <View style={styles.clubTopText}>
+                <Text style={styles.clubNameText}>狗醫師社</Text>
+                <Text style={styles.clubLeaderText}>社長 Emmal</Text>
+              </View>
                     <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>
                 <View style={styles.clubHead}>
                 </View>
             </View>
+
+            <View style={styles.beFlexEnd}>
             <View style={styles.searchConR}>
                 <View style={styles.clubHead}>
                 </View>
                 <View style={styles.clubText}>
-                  <Text style={styles.clubNameText}>長庚大學熱舞社</Text>
+                <View style={styles.clubTopText}>
+                <Text style={styles.clubNameText}>紫藤花社</Text>
+                <Text style={styles.clubLeaderText}>社長 Emmal</Text>
+              </View>
                   <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>          
               </View>
+              </View>
+
               <View style={styles.searchConL}>
                 <View style={styles.clubText}>
-                    <Text style={styles.clubNameText}>長庚大學狗醫師社</Text>
+                  <View style={styles.clubTopText}>
+                    <Text style={styles.clubNameText}>空手道社</Text>
+                    <Text style={styles.clubLeaderText}>社長 Emmal</Text>
+                  </View>
                     <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                  
                 </View>
                 <View style={styles.clubHead}>
                 </View>
             </View>
+
+            <View style={styles.beFlexEnd}>
             <View style={styles.searchConR}>
                 <View style={styles.clubHead}>
                 </View>
                 <View style={styles.clubText}>
-                  <Text style={styles.clubNameText}>長庚大學熱舞社</Text>
+                <View style={styles.clubTopText}>
+                <Text style={styles.clubNameText}>民俗舞蹈社</Text>
+                <Text style={styles.clubLeaderText}>社長 Emmal</Text>
+              </View>
                   <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>          
               </View>
+            </View>
         </View>
         </ScrollView>    
             
@@ -78,7 +98,10 @@ const styles = StyleSheet.create({
 
   searchBar:{
       width:'100%',
-      backgroundColor: '#123456',
+      backgroundColor: '#ece289',
+      borderColor:'#ece289',
+      color:'#ece289',
+      borderRadius:10,
   },
   searchInput:{
     backgroundColor: '#f3e1ce',
@@ -88,30 +111,37 @@ const styles = StyleSheet.create({
   },
   searchConL:{
     height:140,
+    width:350,
     backgroundColor:'#ffaf60',
     flexDirection:'row',
-    borderTopRightRadius:100,
-    borderBottomRightRadius:100,
+    borderTopRightRadius:40,
+    borderBottomRightRadius:40,
     justifyContent:'center',
     alignItems: 'center',
     shadowOffset:{ width: 5, height: 5, },
     shadowColor:'#000000',
     shadowRadius: 10,
-    shadowOpacity: 0.5
+    shadowOpacity: 0.5,
+    marginBottom:20
   },
   searchConR:{
     height:140,
+    width:350,
     backgroundColor:'#82d900',
     flexDirection:'row',
-    borderTopLeftRadius:100,
-    borderBottomLeftRadius:100,
+    borderTopLeftRadius:40,
+    borderBottomLeftRadius:40,
     justifyContent:'center',
     alignItems: 'center',
     shadowOffset:{ width: 5, height: 5, },
     shadowColor:'#000000',
     shadowRadius: 10,
-    shadowOpacity: 0.5
+    shadowOpacity: 0.5,
+    marginBottom:20
   },
+  beFlexEnd:{
+    flexDirection:'row',
+    justifyContent:'flex-end'},
   clubHead:{
     backgroundColor:'#4f4f4f',
     borderRadius:100,
@@ -127,15 +157,22 @@ const styles = StyleSheet.create({
   clubText:{
       padding:20
   },
+  clubTopText:{
+    flexDirection:'row',
+  },
 clubNameText:{
     fontSize:20,
+},
+clubLeaderText:{
+  fontSize:10,
+  padding:2,
 },
 clubIntroText:{
     padding:8
 },
   tabBar:{
     height:50,
-    backgroundColor:'#8080c0',
+    backgroundColor:'#ece289',
    
     
   },
