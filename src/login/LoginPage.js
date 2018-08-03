@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { Text, 
-         View, 
-         StyleSheet,
-         KeyboardAvoidingView,
-         TextInput,
-         TouchableOpacity,
-         CheckBox,
-         ImageBackground
-         } from 'react-native';
+import {  Text, 
+          View, 
+          StyleSheet,
+          KeyboardAvoidingView,
+          TextInput,
+          TouchableOpacity,
+          ImageBackground
+        } from 'react-native';
+import { CheckBox } from 'react-native-elements';
 import { Constants } from 'expo';
 
 export default class Form extends Component{
@@ -17,82 +17,96 @@ render(){
     style={styles.bf}
     source={require('../../img/myboyfriend.jpg')}
     imageStyle={{ resizeMode: 'cover' }}
-  >
-    <View style={{flex:1}}>
-    <View style={styles.container}>
-       
+    >
+      <View style={{flex:1}}>
+        <View style={styles.container}>
+          <View style={styles.logo}></View>
           <TextInput
             placeholder='   abc123@iclub.com'
-            placeholderTextColor='rgba(255,255,255,0.5)'
+            placeholderTextColor='rgba(255,255,255,0.8)'
             style={styles.textInput}
             underlineColorAndroid={'transparent'}/>
           <TextInput
             placeholder='   password'
-            placeholderTextColor='rgba(255,255,255,0.5)'
+            placeholderTextColor='rgba(255,255,255,0.8)'
             secureTextEntry={true}
             style={styles.textInput}
             underlineColorAndroid={'transparent'}/>
-       <View style={styles.checkboxtext}>
-          <CheckBox style={styles.check}/>
-          <Text style={styles.rememberme}>記住我</Text>
-       </View>
+          <CheckBox
+            center
+            title='記住'
+            iconType='material'
+            checkedIcon='clear'
+            uncheckedIcon='add'
+            checkedColor='white'
+          />
           <TouchableOpacity style={styles.gobotton}>
             <Text style={styles.gotext}>登入</Text>
           </TouchableOpacity>
-       
-       <Text style={styles.or}>____________  or  ____________</Text>
-       <Text style={styles.signinwith}>使用其他方式登入</Text>
-       <View style={styles.checkboxtext}>
-        <TouchableOpacity style={styles.signinbotton}>
-          <Text style={styles.signintext}>Facebook</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.signinbotton}>
-          <Text style={styles.signintext}>Gmail</Text>
-        </TouchableOpacity>
-       </View>
-       <TouchableOpacity>
-       <Text style={styles.forgot}>忘記密碼?</Text>
-       </TouchableOpacity>
-       </View>
-       <View style={styles.signup}>
-         <Text style={styles.signupwith}>還沒有帳號嗎?</Text>
-        <TouchableOpacity>
-          <Text style={styles.signupwith}>註冊</Text>
-        </TouchableOpacity>
-        <KeyboardAvoidingView behavior='padding'>
-      </KeyboardAvoidingView>
-       </View>      
-    </View>   
+          <Text style={styles.or}>_______________  or  _______________</Text>
+          <Text style={styles.signinwith}>使用其他方式登入</Text>
+          <View style={styles.row}>
+            <TouchableOpacity style={styles.fbBotton}>
+              <Text style={styles.fbText}>Facebook</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.gmailBotton}>
+              <Text style={styles.gmailText}>Gmail</Text>
+            </TouchableOpacity>
+          </View>
+            <TouchableOpacity>
+              <Text style={styles.forgot}>忘記密碼?</Text>
+            </TouchableOpacity>
+        </View>
+            <View style={styles.signupBottom}>
+              <Text style={styles.noAccount}>還沒有帳號嗎?</Text>
+                <TouchableOpacity>
+                  <Text style={styles.signup}>註冊</Text>
+                </TouchableOpacity>
+              <KeyboardAvoidingView behavior='padding'>
+              </KeyboardAvoidingView>
+            </View>      
+      </View>   
     </ImageBackground>
   );
 }
 }
 
 const styles = StyleSheet.create({
-    bf:{
-        flex:1,
-        height:null,
-        width:null
-      },
-       container:{
-          flex: 20,
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection:'column'
-        },
+  bf:{
+    flex:1,
+    height:null,
+    width:null
+  },
+  container:{
+    flex: 25,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection:'column',
+    backgroundColor:'rgba(0,0,0,0.5)'
+  },
+  logo:{
+    margin:25,
+    width:80,
+    height:80,
+    color:'white',
+    backgroundColor:'rgba(255,255,255,0.4)',
+    borderRadius: 100
+  },
   textInput:{
-    margin:20,
-    width:200,
+    marginBottom:25,
+    width:230,
     height:35,
-    backgroundColor:'rgba(255,255,255,0.5)',
-    borderRadius: 50
+    color:'white',
+    backgroundColor:'rgba(255,255,255,0.4)',
+    borderRadius: 50,
+    color:'white'
   },
   gobotton:{
     backgroundColor:'rgba(255,255,255,0)',
-    margin:15,
+    margin:10,
     borderWidth:1,
     borderColor:'white',
-    width:200,
+    width:230,
     height:35,
     borderRadius: 50
   },
@@ -102,17 +116,6 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     paddingTop:5
   },
-  checkboxtext:{
-    flexDirection:'row'
-  },
-  rememberme:{
-    color:'white',
-    fontSize:12,
-    margin:15
-  },
-  check:{
-    backgroundColor:'white'
-  },
   or:{
     color:'white',
     fontSize:13,
@@ -120,22 +123,33 @@ const styles = StyleSheet.create({
   },
   signinwith:{
     color:'white',
-    fontSize:12,
-    marginTop:15
+    fontSize:15,
+    margin:8
   },
-  signupwith:{
-    color:'white',
-    fontSize:12
+  row:{
+    flexDirection:'row'
   },
-  signinbotton:{
-    backgroundColor:'rgba(255,255,255,0.5)',
+  fbBotton:{
+    backgroundColor:'rgba(255,255,255,0.4)',
     margin:15,
-    marginTop:20,
-    width:90,
+    width:100,
     height:35,
     borderRadius: 50
   },
-  signintext:{
+  fbText:{
+    color:'white',
+    fontSize:15,
+    alignSelf: 'center',
+    paddingTop:5
+  },
+  gmailBotton:{
+    backgroundColor:'rgba(255,255,255,0.4)',
+    margin:15,
+    width:100,
+    height:35,
+    borderRadius: 50
+  },
+  gmailText:{
     color:'white',
     fontSize:15,
     alignSelf: 'center',
@@ -143,16 +157,23 @@ const styles = StyleSheet.create({
   },
   forgot:{
     color:'white',
-    fontSize:12,
-    marginTop:40
+    fontSize:15,
+    margin:10
   },
-  signup:{
+  signupBottom:{
     flex:1,
     alignSelf:'stretch',
     alignItems:'center',
     justifyContent: 'center',
     flexDirection:'row',
-    backgroundColor:'rgba(153,153,153,0.5)'
+    backgroundColor:'rgba(153,153,153,0.4)'
+  },
+  noAccount:{
+    color:'white',
+    fontSize:15
+  },
+  signup:{
+    color:'white',
+    fontSize:15
   }
-  
 })

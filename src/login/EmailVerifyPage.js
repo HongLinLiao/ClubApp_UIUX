@@ -11,11 +11,11 @@ import { Constants } from 'expo';
 export default class Form extends Component{
 render(){
   return(
-    <ImageBackground
-    style={styles.bf}
-    source={require('../../img/myboyfriend.jpg')}
-    imageStyle={{ resizeMode: 'cover' }}
-  >
+ <ImageBackground
+  style={styles.bf}
+  source={require('../../img/myboyfriend.jpg')}
+  imageStyle={{ resizeMode: 'cover' }}
+  > 
     <View style={styles.container}> 
           <Text style={styles.title}>信箱驗證</Text>
           <Text style={styles.send}>已寄驗證信至</Text>
@@ -32,7 +32,7 @@ render(){
           <KeyboardAvoidingView behavior='padding'>
           </KeyboardAvoidingView> 
     </View>
-    </ImageBackground>
+  </ImageBackground>
   );
 }
 }
@@ -47,62 +47,63 @@ const styles = StyleSheet.create({
           flex: 1,
           alignItems: 'center',
           justifyContent: 'center',
-          flexDirection:'column'
+          flexDirection:'column',
+          backgroundColor:'rgba(0,0,0,0.5)'
   },
   title:{
     color:'white',
-    fontSize:40,
+    fontSize:35,
     alignSelf: 'center',
-    padding:55
+    marginBottom:90
   },
   send:{
     color:'white',
-    fontSize:20,
+    fontSize:18,
     alignSelf: 'center',
-    padding:5
+    margin:5
   },
   mail:{
     color:'white',
-    fontSize:25,
+    fontSize:18,
     fontWeight: 'bold',
     alignSelf: 'center',
-    padding:5
+    margin:5
   },
   againBotton:{
-    backgroundColor:'rgba(255,255,255,0.2)',
+    backgroundColor:'rgba(255,255,255,0.4)',
     margin:35,
     borderWidth:1,
     borderColor:'white',
     width:230,
-    height:40,
-    borderRadius:5,
+    height:37,
+    borderRadius:7,
     justifyContent:'center'
   },
   againText:{
     color:'white',
-    fontSize:20,
+    fontSize:15,
     alignSelf: 'center'
   },
   loginBotton:{
     backgroundColor:'rgba(255,255,255,0)',
-    margin:30,
+    margin:43,
     borderWidth:1,
     borderColor:'white',
-    width:150,
-    height:40,
+    width:140,
+    height:35,
     borderRadius: 50,
     justifyContent:'center'
   },
   loginText:{
     color:'white',
-    fontSize:20,
+    fontSize:15,
     alignSelf: 'center'
   },
   backText:{
     color:'white',
-    fontSize:20,
+    fontSize:15,
     alignSelf: 'center',
-    paddingTop:20
+    paddingTop:5
   }
  
 })

@@ -47,45 +47,48 @@ bf:{
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection:'column'
+    flexDirection:'column',
+    backgroundColor:'rgba(0,0,0,0.5)'
   },
   title:{
     color:'white',
-    fontSize:40,
+    fontSize:35,
     alignSelf: 'center',
-    paddingBottom:90
+    paddingBottom:75
   },
   enter:{
     color:'white',
-    fontSize:20,
+    fontSize:15,
     alignSelf: 'center',
-    padding:10
+    padding:20
   },
   textInput:{
-    marginBottom:15,
+    marginBottom:35,
     width:230,
-    height:35,
-    backgroundColor:'rgba(255,255,255,0.2)',
-    borderRadius:5
+    height:37,
+    color:'white',
+    backgroundColor:'rgba(255,255,255,0.4)',
+    borderRadius:7,
+    textAlign:'center'    
   },
   okBotton:{
     backgroundColor:'rgba(255,255,255,0)',
-    margin:60,
+    margin:38,
     borderWidth:1,
     borderColor:'white',
-    width:150,
-    height:40,
+    width:140,
+    height:35,
     borderRadius: 50,
     justifyContent:'center'
   },
   okText:{
     color:'white',
-    fontSize:20,
+    fontSize:15,
     alignSelf: 'center'
   },
   backText:{
     color:'white',
-    fontSize:20,
+    fontSize:15,
     alignSelf: 'center',
     paddingTop:10
   }

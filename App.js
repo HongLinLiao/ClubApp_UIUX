@@ -36,7 +36,7 @@ export default class App extends React.Component {
       // <PersonalGroupPage />
       // <EmailVerifyPage />
       // <ForgotPswPage />
-      // <LoginPage />
+       <LoginPage />
       // <NickNamePage />
       // <RegisteredPage />
     );
