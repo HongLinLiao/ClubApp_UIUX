@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet ,ScrollView,TouchableOpacity } from 'react-native';
+import { Text, View, StyleSheet ,ScrollView,TouchableOpacity,Image, } from 'react-native';
+import {Icon} from 'react-native-elements'
 import { Constants } from 'expo';
 
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
@@ -9,27 +10,109 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <StatusBarPaddingIOS style={{backgroundColor: '#ca8ec2'}}/>
+        <StatusBarPaddingIOS style={{backgroundColor: '#f6b456'}}/>
           
             <View style={styles.calendar}>
               <View style={styles.selectMonth}>
-                <TouchableOpacity><Text>back</Text></TouchableOpacity>
-                <Text style={styles.monthText}>AUG</Text>
-                <TouchableOpacity><Text>next</Text></TouchableOpacity>            
+                <TouchableOpacity>
+                  <Icon name='keyboard-arrow-left'  color='#1b3d5f'
+                  size={50}></Icon>
+                </TouchableOpacity>
+                <View style={styles.allMonthText}>
+                <Text style={styles.monthText}>August</Text>
+                <Text style={styles.yearText}>2018</Text>
+                </View>
+                <TouchableOpacity>
+                  <Icon name='keyboard-arrow-right' color='#1b3d5f'
+                  size={50}></Icon>
+                </TouchableOpacity>            
               </View>
 
-              <View style={styles.dates}>
-              <Text style={styles.dayText}>SUN MON TUE WED THU FRI SAT</Text>
-              
+              <View style={styles.dayView}>
+                <Text style={styles.dayText}>SUN</Text>
+                <Text style={styles.dayText}>MON</Text>
+                <Text style={styles.dayText}>TUE</Text>
+                <Text style={styles.dayText}>WED</Text>
+                <Text style={styles.dayText}>THU</Text>
+                <Text style={styles.dayText}>FRI</Text>
+                <Text style={styles.dayText}>SAT</Text>
+              </View>
+              <View style={styles.dateView}>
+                <View style={styles.weekView}>
+                <View style={styles.oneDateView}><Text style={styles.dateText}></Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}></Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}></Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>1</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>2</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>3</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>4</Text></View>
+                </View>
+
+                <View style={styles.weekView}>
+                  <View style={styles.oneDateView}><Text style={styles.dateText}>5</Text></View>
+                  <View style={styles.oneDateView}><Text style={styles.dateText}>6</Text></View>
+                  <View style={styles.oneDateView}><Text style={styles.dateText}>7</Text></View>
+                  <View style={styles.eventDateView}><Text style={styles.dateText}>8</Text></View>
+                  <View style={styles.todayDateView}><Text style={styles.dateText}>9</Text></View>
+                  <View style={styles.oneDateView}><Text style={styles.dateText}>10</Text></View>
+                  <View style={styles.oneDateView}><Text style={styles.dateText}>11</Text></View>
+                </View>
+
+                <View style={styles.weekView}>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>12</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>13</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>14</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>15</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>16</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>17</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>18</Text></View>
+                </View>
+
+                <View style={styles.weekView}>
+                
+                <View style={styles.oneDateView}><Text style={styles.dateText}>19</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>20</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>21</Text></View>
+                
+                <View style={styles.oneDateView}><Text style={styles.dateText}>22</Text></View>
+                <View style={styles.touchDateView}><Text style={styles.dateText}>23</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>24</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>25</Text></View>
+                </View>
+
+                <View style={styles.weekView}>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>26</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>27</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>28</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>29</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>30</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}>31</Text></View>
+                <View style={styles.oneDateView}><Text style={styles.dateText}></Text></View>
+                </View>
+
+                <Text style={{color:'#d0d0d0'}}
+                    >_____________________________________________________________</Text>
+
+
               </View>
             <ScrollView horizontal={true}>
             <View style={styles.activityPoster}>
-              <View style={styles.posters}></View>
-              <View style={styles.posters}></View>
-              <View style={styles.posters}></View>
-              <View style={styles.posters}></View>
-              <View style={styles.posters}></View>
-              <View style={styles.posters}></View>
+              <View style={styles.posters}>
+              <Image source={require('../../img/poster1.jpg')} style={styles.posters}>
+                </Image>
+              </View>
+              <View style={styles.posters}>
+              <Image source={require('../../img/poster2.jpg')} style={styles.posters}>
+                </Image>
+              </View>
+              <View style={styles.posters}>
+              <Image source={require('../../img/poster3.jpg')} style={styles.posters}>
+                </Image>
+              </View>
+              <View style={styles.posters}>
+              <Image source={require('../../img/poster4.jpg')} style={styles.posters}>
+                </Image>
+              </View>
             </View>
             </ScrollView>
             </View>
@@ -51,8 +134,6 @@ const styles = StyleSheet.create({
   },
   calendar:{
     flex:1,
-    //backgroundColor:'#ffe153',
-    
   },
   selectMonth:{
     height:70,
@@ -61,37 +142,109 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
 
   },
-  monthText:{
-    fontSize:20,
-    fontWeight:'bold',
-    textShadowColor:'#6c6c6c',
-    textShadowRadius:2,
-    textShadowOffset:{width:2,height:2},
+  allMonthText:{
+    flexDirection:'column',
+    justifyContent:'center',
+    alignItems:'center',
+    
   },
-  dates:{
-    borderWidth:2,
-    height:350,
+  monthText:{
+    fontSize:40,
+    //fontWeight:'bold',
+    justifyContent:'center',
+    alignItems:'center',
+    color:'#1b3d5f'
+  },
+  yearText:{
+    color:'#1b3d5f'
+  },
+  arrow:{
+    width:40,
+    height:40,
+  },
+  dayView:{
+    alignItems: 'center', 
+    justifyContent:'space-around',   
+    height:45,
+    flexDirection:'row',
+    padding:1,
+    
   },
   dayText:{
-    fontSize:24,
-    backgroundColor:'#c6ccd2',
+    fontSize:14,
+    color:'#1b3d5f',
+    fontWeight:'bold',
+  },
+  dateView:{
+    flexDirection:'column'
+  },
+  weekView:{
+    flexDirection:'row',  
+  },
+  oneDateView:{
+    alignItems:'center',
+    justifyContent:'center',
+    width:54,
+    height:50,
+   
+  },
+  eventDateView:{
+    alignItems:'center',
+    justifyContent:'center',
+    width:54,
+    height:50,
+    backgroundColor:'#f6b456',
+    borderRadius:25, 
+  },
+  eventContinueView:{
+    alignItems:'center',
+    justifyContent:'center',
+    width:54,
+    height:50,
+    backgroundColor:'#f6b456',
+    borderRadius:25, 
+    flexDirection:'row'
+  },
+  todayDateView:{
+    alignItems:'center',
+    justifyContent:'center',
+    width:54,
+    height:50,
+    borderWidth:1,
+    borderColor:'#ff0000',
+    borderRadius:25, 
+  },
+  touchDateView:{
+    alignItems:'center',
+    justifyContent:'center',
+    width:54,
+    height:50,
+    backgroundColor:'#7b7b7b',
+    borderRadius:25, 
   },
   dateText:{
-    fontSize:40,
+    fontSize:18,
+    fontWeight:'bold',
+    color:'#1b3d5f'
   },
   activityPoster:{
     flexDirection:'row',
     justifyContent: 'space-around',
     alignItems: 'center',
+    marginRight:10,
   },
   posters:{
     height:175,
     width:100,
-    borderWidth:2,
+    shadowOffset:{ width: 2, height: 2, },
+    shadowColor:'#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    
   },
 
   tabBar:{
     height:50,
-    backgroundColor:'#8080c0'
+    backgroundColor:'#f6b456'
   },
 });

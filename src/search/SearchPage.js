@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     opacity:0.5,
   },
   searchCon:{
-    height:140,
+    height:125,
     width:350,
     backgroundColor:'#9d9d9d',
     flexDirection:'row',
@@ -157,10 +157,10 @@ const styles = StyleSheet.create({
 
   clubHead:{
     backgroundColor:'#e0e0e0',
-    borderWidth:8,
-    borderRadius:50,
-    width:100,
-    height:100,
+    borderWidth:3,
+    borderRadius:40,
+    width:80,
+    height:80,
     borderColor:'#e0e0e0',
  
   
@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
   },
   clubTopText:{
     flexDirection:'row',
+    
    
   },
 clubNameText:{

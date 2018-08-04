@@ -24,13 +24,13 @@ export default class App extends React.Component {
   render() {
     return (
       // <HomePage />
-       <SearchPage />
+      // <SearchPage />
       // <ClubPage />
       // <ClubCalendarPage />
       // <ClubStoriesPage />
       // <PostsPage />
       // <ActiviesPage />
-      // <CalendarPage />
+       <CalendarPage />
       // <PersonalPage />
       // <PersonalPWDPage />
       // <PersonalMailPage />
