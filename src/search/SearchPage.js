@@ -12,18 +12,21 @@ export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <StatusBarPaddingIOS style={{backgroundColor: '#ece289'}}/>
+      <StatusBarPaddingIOS style={{backgroundColor: '#f6b456'}}/>
       <ScrollView>
          
               <SearchBar  
               containerStyle={styles.srarchBar}//外框顏色無法
               inputStyle={styles.searchInput}
               icon={{ type: 'font-awesome', name: 'search' }}
-              placeholder='搜尋'/>
+              placeholder='搜尋'
+              />
            
         <View styles={styles.searchView}>
-
-            <View style={styles.searchConL}>
+        
+        
+            <ImageBackground source={require('../../img/dog.jpg')} imageStyle={styles.searchL} 
+            style={styles.searchCon}>
                 <View style={styles.clubText}>
                 <View style={styles.clubTopText}>
                 <Text style={styles.clubNameText}>狗醫師社</Text>
@@ -31,50 +34,58 @@ export default class App extends Component {
               </View>
                     <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>
-                <View style={styles.clubHead}>
-                </View>
-            </View>
-
+                <Image source={require('../../img/dogMan.jpg')}  style={styles.clubHead}>
+                </Image>
+            </ImageBackground>
+        
             <View style={styles.beFlexEnd}>
-            <View style={styles.searchConR}>
-                <View style={styles.clubHead}>
-                </View>
+            <ImageBackground source={require('../../img/flower.jpg')} imageStyle={styles.searchR} 
+            style={styles.searchCon}>
+                <Image source={require('../../img/flowerMan.jpg')}  style={styles.clubHead}>
+                </Image>
                 <View style={styles.clubText}>
                 <View style={styles.clubTopText}>
                 <Text style={styles.clubNameText}>紫藤花社</Text>
                 <Text style={styles.clubLeaderText}>社長 Emmal</Text>
               </View>
-                  <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
-                </View>          
-              </View>
-              </View>
-
-              <View style={styles.searchConL}>
-                <View style={styles.clubText}>
-                  <View style={styles.clubTopText}>
-                    <Text style={styles.clubNameText}>空手道社</Text>
-                    <Text style={styles.clubLeaderText}>社長 Emmal</Text>
-                  </View>
                     <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
-                  
                 </View>
-                <View style={styles.clubHead}>
-                </View>
-            </View>
-
-            <View style={styles.beFlexEnd}>
-            <View style={styles.searchConR}>
-                <View style={styles.clubHead}>
-                </View>
+                
+            </ImageBackground>
+            </View> 
+            
+            <ImageBackground source={require('../../img/kongfu.jpg')} imageStyle={styles.searchL} 
+            style={styles.searchCon}>
                 <View style={styles.clubText}>
                 <View style={styles.clubTopText}>
-                <Text style={styles.clubNameText}>民俗舞蹈社</Text>
+                <Text style={styles.clubNameText}>空手道社</Text>
                 <Text style={styles.clubLeaderText}>社長 Emmal</Text>
               </View>
-                  <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
-                </View>          
+                    <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                </View>
+                <Image source={require('../../img/kongfuMan.jpg')}  style={styles.clubHead}>
+                </Image>
+            </ImageBackground>
+
+              
+            <View style={styles.beFlexEnd}>
+            <ImageBackground source={require('../../img/dance.jpg')} imageStyle={styles.searchR} 
+            style={styles.searchCon}>
+                <Image source={require('../../img/danceMan.jpg')}  style={styles.clubHead}>
+                </Image>
+                <View style={styles.clubText}>
+                <View style={styles.clubTopText}>
+                <Text style={styles.clubNameText}>舞蹈社</Text>
+                <Text style={styles.clubLeaderText}>社長 Emmal</Text>
               </View>
-            </View>
+                    <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                </View>
+                
+            </ImageBackground>
+            </View> 
+
+
+            
         </View>
         </ScrollView>    
             
@@ -100,79 +111,87 @@ const styles = StyleSheet.create({
       width:'100%',
       backgroundColor: '#ece289',
       borderColor:'#ece289',
-      color:'#ece289',
+     // color:'#ece289',
       borderRadius:10,
+      borderWidth: 1,
   },
   searchInput:{
-    backgroundColor: '#f3e1ce',
+    backgroundColor: '#f1c483',
+    
   },
   searchView:{
     flex:15,
   },
-  searchConL:{
-    height:140,
-    width:350,
-    backgroundColor:'#ffaf60',
-    flexDirection:'row',
+
+  searchL:{
     borderTopRightRadius:40,
     borderBottomRightRadius:40,
-    justifyContent:'center',
-    alignItems: 'center',
-    shadowOffset:{ width: 5, height: 5, },
-    shadowColor:'#000000',
-    shadowRadius: 10,
-    shadowOpacity: 0.5,
-    marginBottom:20
+    borderRadius:40,
+    opacity:0.5,
   },
-  searchConR:{
-    height:140,
-    width:350,
-    backgroundColor:'#82d900',
-    flexDirection:'row',
+  searchR:{
     borderTopLeftRadius:40,
     borderBottomLeftRadius:40,
+    borderRadius:40,
+    opacity:0.5,
+  },
+  searchCon:{
+    height:140,
+    width:350,
+    backgroundColor:'#9d9d9d',
+    flexDirection:'row',
     justifyContent:'center',
     alignItems: 'center',
     shadowOffset:{ width: 5, height: 5, },
     shadowColor:'#000000',
     shadowRadius: 10,
     shadowOpacity: 0.5,
-    marginBottom:20
+    marginBottom:20,
+    borderRadius:40
   },
+  
   beFlexEnd:{
     flexDirection:'row',
-    justifyContent:'flex-end'},
+    justifyContent:'flex-end'
+  },
+
   clubHead:{
-    backgroundColor:'#4f4f4f',
-    borderRadius:100,
+    backgroundColor:'#e0e0e0',
+    borderWidth:8,
+    borderRadius:50,
     width:100,
     height:100,
-    shadowRadius:10,
-    shadowOffset:{ width: 5, height: 5, },
-    shadowColor:'#000000',
-    shadowRadius: 10,
-    shadowOpacity: 0.5,
+    borderColor:'#e0e0e0',
+ 
+  
 
+    
   },
   clubText:{
-      padding:20
+      padding:20,
+      
   },
   clubTopText:{
     flexDirection:'row',
+   
   },
 clubNameText:{
     fontSize:20,
+    fontWeight:'bold',
+    color:'#ffffff'
 },
 clubLeaderText:{
   fontSize:10,
   padding:2,
+  color:'#ffffff'
 },
 clubIntroText:{
-    padding:8
+    padding:8,
+    color:'#ffffff',
 },
   tabBar:{
     height:50,
-    backgroundColor:'#ece289',
+    backgroundColor:'#f6b456',
    
     
   },
