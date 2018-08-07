@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet ,ScrollView,TouchableOpacity,Image, } from 'react-native';
+import { Text, View, StyleSheet ,ScrollView,TouchableOpacity,Image, StatusBar} from 'react-native';
 import {Icon} from 'react-native-elements'
 import { Constants } from 'expo';
 
@@ -11,23 +11,28 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <StatusBarPaddingIOS style={{backgroundColor: '#f6b456'}}/>
-          
-            <View style={styles.calendar}>
+        <StatusBar backgroundColor='#f6b456'/>  
+           
               <View style={styles.selectMonth}>
+                <View style={styles.arrowView}>
                 <TouchableOpacity>
                   <Icon name='keyboard-arrow-left'  color='#1b3d5f'
                   size={50}></Icon>
                 </TouchableOpacity>
+                </View>
                 <View style={styles.allMonthText}>
                 <Text style={styles.monthText}>August</Text>
                 <Text style={styles.yearText}>2018</Text>
                 </View>
+                <View style={styles.arrowView}>
                 <TouchableOpacity>
                   <Icon name='keyboard-arrow-right' color='#1b3d5f'
                   size={50}></Icon>
-                </TouchableOpacity>            
+                </TouchableOpacity>  
+                </View>          
               </View>
 
+              <View style={styles.calendar}>
               <View style={styles.dayView}>
                 <Text style={styles.dayText}>SUN</Text>
                 <Text style={styles.dayText}>MON</Text>
@@ -91,7 +96,7 @@ export default class App extends Component {
                 </View>
 
                 <Text style={{color:'#d0d0d0'}}
-                    >_____________________________________________________________</Text>
+                    >________________________________________________________</Text>
 
 
               </View>
@@ -134,12 +139,17 @@ const styles = StyleSheet.create({
   },
   calendar:{
     flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  arrowView:{
+    
   },
   selectMonth:{
     height:70,
     flexDirection:'row',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent:'space-between'
 
   },
   allMonthText:{
@@ -166,6 +176,7 @@ const styles = StyleSheet.create({
     alignItems: 'center', 
     justifyContent:'space-around',   
     height:45,
+    width:350,
     flexDirection:'row',
     padding:1,
     
@@ -176,7 +187,8 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   dateView:{
-    flexDirection:'column'
+    flexDirection:'column',
+    width:350,
   },
   weekView:{
     flexDirection:'row',  
@@ -184,23 +196,23 @@ const styles = StyleSheet.create({
   oneDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:54,
-    height:50,
+    width:50,
+    height:46,
    
   },
   eventDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:54,
-    height:50,
+    width:50,
+    height:46,
     backgroundColor:'#f6b456',
     borderRadius:25, 
   },
   eventContinueView:{
     alignItems:'center',
     justifyContent:'center',
-    width:54,
-    height:50,
+    width:50,
+    height:46,
     backgroundColor:'#f6b456',
     borderRadius:25, 
     flexDirection:'row'
@@ -208,8 +220,8 @@ const styles = StyleSheet.create({
   todayDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:54,
-    height:50,
+    width:50,
+    height:46,
     borderWidth:1,
     borderColor:'#ff0000',
     borderRadius:25, 
@@ -217,8 +229,8 @@ const styles = StyleSheet.create({
   touchDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:54,
-    height:50,
+    width:50,
+    height:46,
     backgroundColor:'#7b7b7b',
     borderRadius:25, 
   },
@@ -231,7 +243,6 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginRight:10,
   },
   posters:{
     height:175,
@@ -240,7 +251,8 @@ const styles = StyleSheet.create({
     shadowColor:'#000000',
     shadowRadius: 10,
     shadowOpacity: 0.5,
-    
+    elevation: 10,
+    marginRight:10,
   },
 
   tabBar:{

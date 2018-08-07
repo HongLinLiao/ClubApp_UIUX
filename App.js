@@ -23,14 +23,14 @@ import RegisteredPage from './src/login/RegisteredPage'
 export default class App extends React.Component {
   render() {
     return (
-      // <HomePage />
+       <HomePage />
       // <SearchPage />
       // <ClubPage />
       // <ClubCalendarPage />
       // <ClubStoriesPage />
       // <PostsPage />
       // <ActiviesPage />
-       <CalendarPage />
+      // <CalendarPage />
       // <PersonalPage />
       // <PersonalPWDPage />
       // <PersonalMailPage />

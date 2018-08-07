@@ -34,15 +34,13 @@ export default class App extends Component {
               </View>
                     <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>
-                <Image source={require('../../img/dogMan.jpg')}  style={styles.clubHead}>
-                </Image>
+                
             </ImageBackground>
         
             <View style={styles.beFlexEnd}>
             <ImageBackground source={require('../../img/flower.jpg')} imageStyle={styles.searchR} 
             style={styles.searchCon}>
-                <Image source={require('../../img/flowerMan.jpg')}  style={styles.clubHead}>
-                </Image>
+                
                 <View style={styles.clubText}>
                 <View style={styles.clubTopText}>
                 <Text style={styles.clubNameText}>紫藤花社</Text>
@@ -63,16 +61,14 @@ export default class App extends Component {
               </View>
                     <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
                 </View>
-                <Image source={require('../../img/kongfuMan.jpg')}  style={styles.clubHead}>
-                </Image>
+                
             </ImageBackground>
 
               
             <View style={styles.beFlexEnd}>
             <ImageBackground source={require('../../img/dance.jpg')} imageStyle={styles.searchR} 
             style={styles.searchCon}>
-                <Image source={require('../../img/danceMan.jpg')}  style={styles.clubHead}>
-                </Image>
+                
                 <View style={styles.clubText}>
                 <View style={styles.clubTopText}>
                 <Text style={styles.clubNameText}>舞蹈社</Text>
@@ -124,16 +120,16 @@ const styles = StyleSheet.create({
   },
 
   searchL:{
-    borderTopRightRadius:40,
-    borderBottomRightRadius:40,
+    // borderTopRightRadius:40,
+    // borderBottomRightRadius:40,
     borderRadius:40,
-    opacity:0.5,
+    
   },
   searchR:{
     borderTopLeftRadius:40,
     borderBottomLeftRadius:40,
-    borderRadius:40,
-    opacity:0.5,
+    //borderRadius:40,
+    
   },
   searchCon:{
     height:125,
@@ -147,54 +143,47 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOpacity: 0.5,
     marginBottom:20,
-    borderRadius:40
+    elevation: 10,
+    //borderRadius:40,
+    borderTopLeftRadius:40,
+    borderBottomLeftRadius:40,
   },
   
   beFlexEnd:{
     flexDirection:'row',
-    justifyContent:'flex-end'
-  },
-
-  clubHead:{
-    backgroundColor:'#e0e0e0',
-    borderWidth:3,
-    borderRadius:40,
-    width:80,
-    height:80,
-    borderColor:'#e0e0e0',
- 
-  
-
-    
+    justifyContent:'flex-end',
+    borderTopLeftRadius:40,
+    borderBottomLeftRadius:40,
   },
   clubText:{
       padding:20,
-      
+      backgroundColor:'#000000',
+      opacity:0.7,
   },
   clubTopText:{
     flexDirection:'row',
-    
-   
+    opacity:1,
   },
 clubNameText:{
     fontSize:20,
     fontWeight:'bold',
-    color:'#ffffff'
+    color:'#ffffff',
+    opacity:1,
 },
 clubLeaderText:{
   fontSize:10,
   padding:2,
-  color:'#ffffff'
+  color:'#ffffff',
+  opacity:1,
 },
 clubIntroText:{
     padding:8,
     color:'#ffffff',
+    opacity:1,
 },
   tabBar:{
     height:50,
-    backgroundColor:'#f6b456',
-   
-    
+    backgroundColor:'#f6b456', 
   },
 
  
