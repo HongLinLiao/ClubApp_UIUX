@@ -1,46 +1,88 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import HomePage from './src/home/HomePage.js'
-import SearchPage from './src/search/SearchPage.js'
-import ClubPage from './src/club/ClubPage.js'
-import ClubCalendarPage from './src/club/ClubCalendarPage.js'
-import ClubStoriesPage from './src/club/ClubStoriesPage.js'
-import PostsPage from './src/club/PostsPage.js'
-import ActiviesPage from './src/club/ActiviesPage.js'
-import CalendarPage from './src/calendar/CalendarPage.js'
-import PersonalPage from './src/personal/PersonalPage.js'
-import PersonalPWDPage from './src/personal/PersonalPWDPage.js'
-import PersonalMailPage from './src/personal/PersonalMailPage.js'
-import PersonalGroupPage from './src/personal/PersonalGroupPage.js'
-import ChangePsdPage from './src/login/ChangePsdPage'
+
+
+//登入頁
 import EmailVerifyPage from './src/login/EmailVerifyPage'
 import ForgotEmailPage from './src/login/ForgotEmailPage'
 import LoginPage from './src/login/LoginPage'
 import NickNamePage from './src/login/NickNamePage'
 import RegisteredPage from './src/login/RegisteredPage'
 
+//首頁
+import HomePage from './src/home/HomePage.js'
+import ActivitesPage from './src/home/ActivitesPage'
+import SelectTypePage from './src/home/SelectTypePage'
+
+//搜尋頁
+import SearchPage from './src/search/SearchPage'
+import CalendarDetailsPage from './src/calendar/CalendarDetailsPage'
+
+//社團頁
+import ClubPage from './src/club/ClubPage.js'
+import ClubCalendarPage from './src/club/ClubCalendarPage.js'
+import ClubStoriesPage from './src/club/ClubStoriesPage.js'
+import PostsPage from './src/club/PostsPage.js'
+import ActiviesPage from './src/club/ActiviesPage.js'
+
+//行事曆頁
+import CalendarPage from './src/calendar/CalendarPage.js'
+
+//個人頁面
+import AdvancedSettingPage from './src/personal/AdvancedSettingPage'
+import ChangeEamilPage from './src/personal/ChangeEamilPage'
+import ChangePasswordPage from './src/personal/ChangePasswordPage'
+import EmailReVerifiedPage from './src/personal/EmailReVerifiedPage'
+import FavoriteClubPage from './src/personal/FavoriteClubPage'
+import JoinedClubPage from './src/personal/JoinedClubPage'
+import NotificationPage from './src/personal/NotificationPage'
+import ProfilePage from './src/personal/ProfilePage'
+import ProfileSettingPage from './src/personal/ProfileSettingPage'
+
+
+
+
 
 export default class App extends React.Component {
   render() {
     return (
-      // <HomePage />
-       <SearchPage />
-      // <ClubPage />
-      // <ClubCalendarPage />
-      // <ClubStoriesPage />
-      // <PostsPage />
-      // <ActiviesPage />
-      // <CalendarPage />
-      // <PersonalPage />
-      // <PersonalPWDPage />
-      // <PersonalMailPage />
-      // <PersonalGroupPage />
-      // <ChangePsdPage />
-      // <EmailVerifyPage />
-      // <ForgotEmailPage />
-      // <LoginPage />
-      // <NickNamePage />
-      // <RegisteredPage />
+  
+      //登入頁
+      //<EmailVerifyPage />
+      //<ForgotEmailPage />
+      //<LoginPage />
+      //<NickNamePage />
+      //<RegisteredPage />
+
+      //首頁
+      //<HomePage />
+      //<ActivitesPage />
+      //<SelectTypePage />
+
+      //搜尋頁
+      //<SearchPage />
+
+      //社團頁
+      //<ClubPage />
+      //<ClubCalendarPage />
+      //<ClubStoriesPage />
+      //<PostsPage />
+      //<ActiviesPage />
+
+      //行事曆頁
+      //<CalendarPage />
+      //<CalendarDetailsPage />
+
+      //個人設定頁
+      //<AdvancedSettingPage />
+      //<ChangeEamilPage />
+      <ChangePasswordPage />
+      //<EmailReVerifiedPage />
+      //<FavoriteClubPage />
+      //<JoinedClubPage />
+      //<NotificationPage />
+      //<ProfilePage />
+      //<ProfileSettingPage />
     );
   }
 }

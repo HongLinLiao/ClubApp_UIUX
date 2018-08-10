@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet ,ScrollView,TouchableOpacity,Image, StatusBar} from 'react-native';
-import {Icon} from 'react-native-elements'
+import {Icon, SearchBar} from 'react-native-elements'
 import { Constants } from 'expo';
 
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
- 
+
+
 
 export default class App extends Component {
   render() {
