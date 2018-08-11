@@ -74,15 +74,15 @@ export default class App extends React.Component {
       //<CalendarDetailsPage />
 
       //個人設定頁
-      //<AdvancedSettingPage />
-      //<ChangeEamilPage />
-      <ChangePasswordPage />
-      //<EmailReVerifiedPage />
-      //<FavoriteClubPage />
-      //<JoinedClubPage />
-      //<NotificationPage />
-      //<ProfilePage />
-      //<ProfileSettingPage />
+      //<AdvancedSettingPage /> //進階設定頁面 
+      //<ChangeEamilPage />  //電子信箱驗證
+      //<ChangePasswordPage /> //變更密碼
+      <EmailReVerifiedPage />  //驗證確認
+      //<FavoriteClubPage /> //收藏社團管理
+      //<JoinedClubPage /> //參加社團管理
+      //<NotificationPage /> //通知設定
+      //<ProfilePage /> //個人頁面
+      //<ProfileSettingPage /> //編輯個人頁面
     );
   }
 }

@@ -15,7 +15,7 @@ export default class App extends Component {
         <View style={styles.headView}>
             <View >
                 <TouchableOpacity>
-                    <Icon name='keyboard-arrow-left'  color='#1b3d5f'
+                    <Icon name='keyboard-arrow-left'  color='#666666'
                         size={50}></Icon>
                 </TouchableOpacity>
             </View>
@@ -37,9 +37,9 @@ export default class App extends Component {
                 <View style={styles.buttonView}>
                 <Button 
                 title='確認'
-                color='#ba935a'
+                color='#666666'
                 backgroundColor='#fbdaa7'
-                borderRadius={30}
+                borderRadius={10}
                 buttonStyle={styles.button} />
                 </View>
         </View>
@@ -69,8 +69,8 @@ const styles = StyleSheet.create({
         flexDirection:'row'
     },
     headText:{
-        color:'#ba935a',
-        fontSize:30,
+        color:'#666666',
+        fontSize:25,
     },
     fake:{
         width:50,
@@ -89,13 +89,13 @@ const styles = StyleSheet.create({
     passwordText:{
         fontSize:20,
         padding:10,
-        color:'#ba935a'
+        color:'#666666'
     },
     passwordInput:{
         backgroundColor:'#fff0dd',
         width:250,
-        height:38,
-        borderRadius:30,
+        height:40,
+        borderRadius:10,
         
     },
     mailView:{
@@ -104,24 +104,26 @@ const styles = StyleSheet.create({
         padding:40,
     },
     userMail:{
+        width:200,
+        alignItems: 'center',
         borderBottomWidth:1,
-        borderBottomColor:'#f6b456',
-        
+        borderBottomColor:'#666666',
+        padding:10,
     },
     mailText:{
         fontSize:15,
         
-        color:'#ba935a'
+        color:'#666666'
     },
     userMailText:{
         
-        color:'#ba935a'
+        color:'#666666'
     },
     buttonView:{
         padding:20,
     },
     button:{
-        width:140,
+        width:150,
         height:45,
         shadowOffset:{ width: 0.5, height: 0.5, },
         shadowColor:'#000000',
