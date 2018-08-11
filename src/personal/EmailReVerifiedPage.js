@@ -24,7 +24,9 @@ export default class App extends Component {
         </View>
         <View style={styles.containView}>
        
-        <Image></Image>
+        <Image source={require('../../img/complete.jpg')}
+        style={styles.completeImage}
+        ></Image>
 
         <View style={styles.mailView}>
             <Text style={styles.mailText}>信件已寄送至</Text>
@@ -77,7 +79,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-
+    completeImage:{
+        height:130,
+        width:130,
+    },
     passwordView:{
         justifyContent: 'center',
         alignItems: 'center',

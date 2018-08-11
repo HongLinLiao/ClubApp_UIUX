@@ -59,7 +59,7 @@ export default class App extends React.Component {
       //<ActivitesPage />
       //<SelectTypePage />
 
-      //搜尋頁
+      //搜尋頁 我
       //<SearchPage />
 
       //社團頁
@@ -69,7 +69,7 @@ export default class App extends React.Component {
       //<PostsPage />
       //<ActiviesPage />
 
-      //行事曆頁
+      //行事曆頁 我
       //<CalendarPage />
       //<CalendarDetailsPage />
 
