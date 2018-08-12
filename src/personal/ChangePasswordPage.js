@@ -14,10 +14,10 @@ export default class App extends Component {
         <StatusBarPaddingIOS style={{backgroundColor: '#f6b456'}}/>
         <View style={styles.headView}>
             <View >
-                <TouchableOpacity>
-                    <Icon name='keyboard-arrow-left'  color='#666666'
-                        size={50}></Icon>
-                </TouchableOpacity>
+            <TouchableOpacity>
+            <Image source={require('../../img/arrowLeft.png')}
+            style={styles.arrow}/>
+         </TouchableOpacity>
             </View>
             <Text style={styles.headText}>變更密碼</Text>
             <View style={styles.fake}></View>
@@ -70,10 +70,14 @@ const styles = StyleSheet.create({
     },
     headText:{
         color:'#666666',
-        fontSize:25,
+        fontSize:20,
+    },
+    arrow:{
+        height:30,
+        width:30,
     },
     fake:{
-        width:50,
+        width:30,
     },
     containView:{
         flex:1,
@@ -87,12 +91,12 @@ const styles = StyleSheet.create({
         padding:40,
     },
     passwordText:{
-        fontSize:20,
+        fontSize:18,
         padding:10,
         color:'#666666'
     },
     passwordInput:{
-        backgroundColor:'#fff0dd',
+        backgroundColor:'rgba(246, 179, 85 ,0.2)',
         width:250,
         height:40,
         borderRadius:10,

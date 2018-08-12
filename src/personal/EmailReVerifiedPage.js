@@ -15,38 +15,37 @@ export default class App extends Component {
         <View style={styles.headView}>
             <View >
                 <TouchableOpacity>
-                    <Icon name='keyboard-arrow-left'  color='#666666'
-                        size={50}></Icon>
+                   <Image source={require('../../img/arrowLeft.png')}
+                   style={styles.arrow}/>
                 </TouchableOpacity>
             </View>
-            <Text style={styles.headText}>驗證確認</Text>
+            <Text style={styles.headText}>驗證電子信箱</Text>
             <View style={styles.fake}></View>
         </View>
         <View style={styles.containView}>
-       
-        <Image source={require('../../img/complete.jpg')}
-        style={styles.completeImage}
-        ></Image>
 
         <View style={styles.mailView}>
-            <Text style={styles.mailText}>信件已寄送至</Text>
+            <Text style={styles.mailText}>電子信箱</Text>
             <View style={styles.userMail}>
             <Text style={styles.userMailText}>abc123@gmail.com</Text>
-            </View>
-                <View style={styles.buttonView}>
-                <Button 
-                title='確認'
-                color='#666666'
-                backgroundColor='#fbdaa7'
-                borderRadius={10}
-                buttonStyle={styles.button} />
-                </View>
+            </View>               
         </View>
+        <View style={styles.passwordView}>
+        <Text style={styles.passwordText}>輸入登入密碼</Text>
+        <TextInput style={styles.passwordInput}></TextInput>
+        </View>
+        
+        
+
+        <TouchableOpacity style={styles.buttonView}>
+                   <Image source={require('../../img/send.png')}
+                   style={styles.send}/>
+                   <Text style={styles.buttonText}>發送驗證碼</Text>
+                </TouchableOpacity>
+
+        <TouchableOpacity><Text style={styles.redText}>重新發送驗證碼</Text></TouchableOpacity>
 
         </View>
-
-
-
 
         <View style={styles.tabBar}></View>    
     </View>
@@ -57,8 +56,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
-        
+        flex:1,     
     },
     headView:{
         height:45,
@@ -67,53 +65,35 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection:'row'
     },
+    arrow:{
+        height:30,
+        width:30,
+    },
     headText:{
         color:'#666666',
-        fontSize:25,
+        fontSize:20,
     },
     fake:{
-        width:50,
+        width:30,
     },
     containView:{
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    completeImage:{
-        height:130,
-        width:130,
-    },
-    passwordView:{
-        justifyContent: 'center',
-        alignItems: 'center',
-        padding:40,
-    },
-    passwordText:{
-        fontSize:20,
-        padding:10,
-        color:'#666666'
-    },
-    passwordInput:{
-        backgroundColor:'#fff0dd',
-        width:250,
-        height:40,
-        borderRadius:10,
-        
-    },
+
+    
     mailView:{
         justifyContent: 'center',
         alignItems: 'center',
-        padding:40,
+        padding:10,
+       // borderWidth:1,
     },
     userMail:{
-        width:200,
-        alignItems: 'center',
-        borderBottomWidth:1,
-        borderBottomColor:'#666666',
         padding:10,
     },
     mailText:{
-        fontSize:15,
+        fontSize:18,
         
         color:'#666666'
     },
@@ -121,18 +101,54 @@ const styles = StyleSheet.create({
         
         color:'#666666'
     },
-    buttonView:{
-        padding:20,
+    passwordView:{
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom:80,
+        //borderWidth:1,
     },
-    button:{
-        width:150,
+    passwordText:{
+        fontSize:20,
+        padding:10,
+        color:'#666666'
+    },
+    passwordInput:{
+        backgroundColor:'rgba(102, 102, 102, 0.25)',
+        width:200,
+        height:40,
+        borderRadius:10,
+        
+    },
+    send:{
+        height:20,
+        width:20,
+        padding:3,
+    },
+    buttonView:{
+        
+        margin:20,
+        flexDirection:'row',
+        alignItems:'center',
+        justifyContent:'center',
+        width:170,
         height:45,
+        borderRadius:20,
+        backgroundColor:'#fbdaa7',
         shadowOffset:{ width: 0.5, height: 0.5, },
         shadowColor:'#000000',
         shadowRadius: 10,
         shadowOpacity: 0.3,
         elevation: 10,
+    },
+    buttonText:{
+        fontSize:18,
+        color:'#666666'
         
+        
+    },
+    redText:{
+        fontSize:13,
+        color:'#f30a0a'
     },
     tabBar:{
         height:50,
