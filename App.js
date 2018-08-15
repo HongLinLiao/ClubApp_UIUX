@@ -38,6 +38,7 @@ import JoinedClubPage from './src/personal/JoinedClubPage'
 import NotificationPage from './src/personal/NotificationPage'
 import ProfilePage from './src/personal/ProfilePage'
 import ProfileSettingPage from './src/personal/ProfileSettingPage'
+import SendEmailSuccessfulPage from './src/personal/SendEmailSuccessfulPage'
 
 
 
@@ -82,6 +83,7 @@ export default class App extends React.Component {
       <NotificationPage />
       <ProfilePage />
       <ProfileSettingPage />
+      <SendEmailSuccessfulPage />
     );
   }
 }
