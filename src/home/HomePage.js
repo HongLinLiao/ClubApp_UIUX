@@ -56,11 +56,12 @@ render() {
             </View>
         </View>
         </ScrollView>
-        <View style={styles.starButtonView}>
-        <Button
-        Icon={{name: 'star', color:'#1b3d5f'}}
-        containerViewStyle={styles.starButton}/>
-        </View>
+        <TouchableOpacity style={styles.star}>
+            <View style={styles.starButtonView}>
+                <Image source={require('../../img/send.png')}
+                style={styles.starImage}/> 
+            </View>
+        </TouchableOpacity>
 
         <View style={styles.tabBar}></View>    
     </View>
@@ -171,21 +172,29 @@ const styles = StyleSheet.create({
     sawTimesText:{
         fontSize:10,
     },
-    starButtonView:{
+    star:{
         justifyContent:'flex-end',
-        margin:10
+        alignItems:'flex-end',
+        margin:20,
     },
-    starButton:{
-        shadowOffset:{ width: 2, height: 2, },
+    starButtonView:{
+        width:60,
+        height:60,
+        justifyContent:'center',
+        alignItems:'center',
+        margin:10,
+        borderRadius:100,
+        backgroundColor:'#f6b456',
+        shadowOffset:{ width: 1, height: 1, },
         shadowColor:'#000000',
         shadowRadius: 10,
         shadowOpacity: 0.5,
         elevation: 10,
-        width:60,
-        height:60,
-        borderRadius:100,
-        backgroundColor:'#f6b456'
+    },
 
+    starImage:{
+        width:30,
+        height:30,
     },
     tabBar:{
         height:50,

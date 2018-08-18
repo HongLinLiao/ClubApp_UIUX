@@ -24,7 +24,7 @@ export default class App extends Component {
         </View>
         <View style={styles.containView}>
             <View style={styles.boxView}>
-                <Text style={styles.boxText}>驗證方式</Text>  
+                <Text style={styles.boxText}>驗證</Text>  
                 <View>
                     <TouchableOpacity>
                         <Icon name='keyboard-arrow-right'  color='#666666'
@@ -53,15 +53,7 @@ export default class App extends Component {
                 </View>
             </View>
 
-            <View style={styles.boxView}>
-                <Text style={styles.boxText}>驗證</Text>  
-                <View>
-                    <TouchableOpacity>
-                        <Icon name='keyboard-arrow-right'  color='#666666'
-                            size={40}></Icon> 
-                    </TouchableOpacity>
-                </View>
-            </View>
+            
 
             <View style={styles.boxView}>
                 <Text style={styles.boxText}>關於我們</Text>  
