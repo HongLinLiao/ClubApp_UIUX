@@ -27,18 +27,21 @@ export default class App extends Component {
 
           <View styles={styles.searchView}>
 
-
+          <View style={styles.blackL}>
             <ImageBackground source={require('../../img/dog.jpg')} imageStyle={styles.searchL}
               style={styles.searchConL}>
-              <View style={styles.clubText}>
-                <View style={styles.clubTopText}>
+              
+                <View style={styles.clubTopTextView}>
                   <Text style={styles.clubNameText}>狗醫師社</Text>
                   <Text style={styles.clubLeaderText}>社長 Emmal</Text>
                 </View>
+                <View style={styles.clubIntroTextView}>
                 <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
-              </View>
+                </View>
+              
 
             </ImageBackground>
+            </View>
           
 
             <View style={styles.beFlexEnd}>
@@ -124,9 +127,23 @@ const styles = StyleSheet.create({
     flex: 15,
   },
 
+  blackL:{
+    backgroundColor:'#000000',
+    height: 125,
+    width: 350,
+    borderTopRightRadius: 40,
+    borderBottomRightRadius: 40,
+    shadowOffset: { width: 5, height: 5, },
+    shadowColor: '#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    marginBottom: 20,
+    elevation: 10,
+  },
   searchL: {
     borderTopRightRadius: 40,
     borderBottomRightRadius: 40,
+    
     //borderRadius:40,
     
 
@@ -155,6 +172,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius:40,
     borderBottomLeftRadius: 40,
     overflow:'hidden',
+    opacity:0.5,
   },
   searchConL: {
     height: 125,
@@ -172,6 +190,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     borderBottomRightRadius: 40,
     overflow:'hidden',
+    opacity:0.5,
   },
   beFlexEnd: {
     flexDirection: 'row',
@@ -182,12 +201,12 @@ const styles = StyleSheet.create({
   },
   clubText: {
     padding: 20,
-    backgroundColor: '#000000',
+    backgroundColor: '#ffffff',
     opacity: 0.7,
   },
-  clubTopText: {
+  clubTopTextView: {
     flexDirection: 'row',
-    opacity: 1,
+    //backgroundColor:'rgba(255, 255, 255, 0.5)',
   },
   clubNameText: {
     fontSize: 20,
@@ -201,10 +220,14 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     opacity: 1,
   },
+  clubIntroTextView:{
+    backgroundColor:'rgba(255, 255, 255, 0.8)',
+
+  },
   clubIntroText: {
     padding: 8,
-    color: '#ffffff',
-    opacity: 1,
+    color: '#000000',
+    
   },
   tabBar: {
     height: 50,

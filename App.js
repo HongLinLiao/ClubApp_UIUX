@@ -60,7 +60,7 @@ export default class App extends React.Component {
       //<SelectTypePage />
 
       //搜尋頁 我
-      //<SearchPage />
+      <SearchPage />
 
       //社團頁
       //<ClubPage />
@@ -74,7 +74,7 @@ export default class App extends React.Component {
       //<CalendarDetailsPage />
 
       //個人設定頁
-      <AdvancedSettingPage /> //進階設定頁面 
+      //<AdvancedSettingPage /> //進階設定頁面 
       //<ChangeEamilPage />  //電子信箱驗證
       //<ChangePasswordPage /> //變更密碼
       //<EmailReVerifiedPage />  //驗證確認

@@ -17,11 +17,12 @@ render() {
             <Text style={styles.headText}>iclubs</Text>
             <View >
                 <TouchableOpacity>
-                    <Icon name='list'  color='#ffffff'
-                        size={40}/>
+                <Image source={require('../../img/star.png')}
+                style={styles.starImage}/>
                 </TouchableOpacity>
             </View>
         </View>
+
         <ScrollView>
         <View style={styles.containView}>
             <View style={styles.box}>
@@ -33,12 +34,20 @@ render() {
                 </View>
                 <View style={styles.clubTextView}>
                     <View style={styles.topTextView}>
+                        <View style={styles.clubNameView}>
                         <Text style={styles.clubNameText}>狗醫師社 </Text>
-                        <Text style={styles.clubManagerText}> 社長 Lucky</Text>
+                        </View>
+                        <View style={styles.clubManagerView}>
+                        <Text style={styles.clubManagerText}>社長 Lucky</Text>
+                        </View>
                     </View>
                     <View style={styles.midTextView}>
+                        <View style={styles.clubActView}>
                         <Text style={styles.clubActText}>期初社大</Text>
+                        </View>
+                        <View style={styles.clubActInfoView}>
                         <Text style={styles.clubActInfoText}>大家快點來參加期初社大吃PIZZA</Text>
+                        </View>
                     </View>
                     <View style={styles.bottomTextView}>
                         <Text style={styles.dateText}>2018/07/29</Text>
@@ -58,7 +67,7 @@ render() {
         </ScrollView>
         <TouchableOpacity style={styles.star}>
             <View style={styles.starButtonView}>
-                <Image source={require('../../img/send.png')}
+                <Image source={require('../../img/star.png')}
                 style={styles.starImage}/> 
             </View>
         </TouchableOpacity>
@@ -102,6 +111,7 @@ const styles = StyleSheet.create({
     
     topTextView:{
         flexDirection:'row',
+        alignItems:'flex-end',
         padding:5,
     },
     clubImageView:{
@@ -121,24 +131,36 @@ const styles = StyleSheet.create({
         borderColor:'#ffffff' 
     },
     clubTextView:{
-        padding:5,
+       // margin:1
+    },
+    clubNameView:{
+        margin:1,
     },
     clubNameText:{
         fontSize:15
+    },
+    clubManagerView:{
+        margin:1,
     },
     clubManagerText:{
         fontSize:10
 
     },
     midTextView:{
-        padding:5,
+        margin:1
+    },
+    clubActView:{
+        margin:1
     },
     clubActText:{
         fontSize:25,
         fontWeight:'bold'
     },
+    clubActInfoView:{
+        margin:1,
+    },
     clubActInfoText:{
-        fontSize:15,
+        fontSize:12,
         
     },
     dateText:{
@@ -146,6 +168,7 @@ const styles = StyleSheet.create({
     },
     bottomTextView:{
         flexDirection:'row',
+        alignItems:'center',
         justifyContent: 'space-between',
         width:280,
         padding:5,
@@ -157,11 +180,11 @@ const styles = StyleSheet.create({
     sawView:{
         flexDirection:'row',
         
-        //alignItems:'center',
+        alignItems:'center',
         //justifyContent: 'space-between',
     },
     sawTimesView:{
-        
+        margin:5,
         alignItems:'center',
         backgroundColor:'#f6b456',
         borderRadius:30,
@@ -193,8 +216,8 @@ const styles = StyleSheet.create({
     },
 
     starImage:{
-        width:30,
-        height:30,
+        width:40,
+        height:40,
     },
     tabBar:{
         height:50,
