@@ -24,7 +24,7 @@ export default class App extends Component {
         center
         iconRight
         title='熱舞社'
-        size={30}
+        size={20}
         uncheckedColor='#1b3d5f'
         checkedColor='#1b3d5f'
         containerStyle={styles.checkBoxContainer}
@@ -35,7 +35,7 @@ export default class App extends Component {
         center
         iconRight
         title='吉他社'
-        size={30}
+        size={20}
         uncheckedColor='#1b3d5f'
         checkedColor='#1b3d5f'
         containerStyle={styles.checkBoxContainer}
@@ -45,7 +45,7 @@ export default class App extends Component {
         center
         iconRight
         title='管樂社'
-        size={30}
+        size={20}
         uncheckedColor='#1b3d5f'
         checkedColor='#1b3d5f'
         containerStyle={styles.checkBoxContainer}
@@ -55,7 +55,7 @@ export default class App extends Component {
         center
         iconRight
         title='雄屏會'
-        size={30}
+        size={20}
         uncheckedColor='#1b3d5f'
         checkedColor='#1b3d5f'
         containerStyle={styles.checkBoxContainer}
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
         backgroundColor:'#f6b456',
     },
     topText:{
-        fontSize:30,
+        fontSize:20,
         color:'#1b3d5f',
         backgroundColor:'#f6b456',
         textAlign:'center',
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
       
     },
     checkBoxText:{
-        fontSize:25,
+        fontSize:18,
         color:'#1b3d5f',
         fontWeight:'normal'
     },

@@ -17,8 +17,8 @@ export default class App extends Component {
               <View style={styles.selectMonth}>
                 <View style={styles.arrowView}>
                 <TouchableOpacity>
-                  <Icon name='keyboard-arrow-left'  color='#1b3d5f'
-                  size={50}></Icon>
+                <Image source={require('../../img/arrowLeft.png')}
+                style={styles.arrow}/>
                 </TouchableOpacity>
                 </View>
                 <View style={styles.allMonthText}>
@@ -27,8 +27,8 @@ export default class App extends Component {
                 </View>
                 <View style={styles.arrowView}>
                 <TouchableOpacity>
-                  <Icon name='keyboard-arrow-right' color='#1b3d5f'
-                  size={50}></Icon>
+                <Image source={require('../../img/arrowRight.png')}
+                style={styles.arrow}/>
                 </TouchableOpacity>  
                 </View>          
               </View>
@@ -97,7 +97,7 @@ export default class App extends Component {
                 </View>
 
                 <Text style={{color:'#d0d0d0'}}
-                    >________________________________________________________</Text>
+                    >____________________________________________________________</Text>
 
 
               </View>
@@ -143,9 +143,10 @@ const styles = StyleSheet.create({
     justifyContent:'center',
     alignItems:'center',
   },
-  arrowView:{
-    
-  },
+  arrow:{
+    height:30,
+    width:30,
+},
   selectMonth:{
     height:70,
     flexDirection:'row',
@@ -197,43 +198,50 @@ const styles = StyleSheet.create({
   oneDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:50,
-    height:46,
+    width:40,
+    height:38,
+    margin:5,
+    
    
   },
   eventDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:50,
-    height:46,
     backgroundColor:'#f6b456',
     borderRadius:25, 
+    width:40,
+    height:38,
+    margin:5,
   },
   eventContinueView:{
     alignItems:'center',
     justifyContent:'center',
-    width:50,
-    height:46,
     backgroundColor:'#f6b456',
     borderRadius:25, 
-    flexDirection:'row'
+    flexDirection:'row',
+    width:40,
+    height:38,
+    margin:5,
   },
   todayDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:50,
-    height:46,
     borderWidth:1,
     borderColor:'#ff0000',
     borderRadius:25, 
+    width:40,
+    height:38,
+    margin:5,
   },
   touchDateView:{
     alignItems:'center',
     justifyContent:'center',
-    width:50,
-    height:46,
+    
     backgroundColor:'#7b7b7b',
     borderRadius:25, 
+    width:40,
+    height:38,
+    margin:5,
   },
   dateText:{
     fontSize:18,

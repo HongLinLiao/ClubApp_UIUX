@@ -15,8 +15,8 @@ export default class App extends Component {
         <View style={styles.headView}>
             <View >
                 <TouchableOpacity>
-                    <Icon name='keyboard-arrow-left'  color='#666666'
-                        size={50}></Icon> 
+                <Image source={require('../../img/arrowLeft.png')}
+                style={styles.arrow}/>
                 </TouchableOpacity>
             </View>
             <Text style={styles.headText}>進階管理</Text>
@@ -24,11 +24,15 @@ export default class App extends Component {
         </View>
         <View style={styles.containView}>
             <View style={styles.boxView}>
-                <Text style={styles.boxText}>驗證</Text>  
+                <Text style={styles.boxFirstText}>驗證</Text> 
+                <Text style={styles.redText}>(已驗證)</Text> 
+                <View style={styles.fake}></View>
+                <View style={styles.fake}></View>
+                <Text style={styles.mailText}>qwertas@gmail.com</Text>
                 <View>
                     <TouchableOpacity>
-                        <Icon name='keyboard-arrow-right'  color='#666666'
-                            size={40}></Icon> 
+                    <Image source={require('../../img/arrowRight.png')}
+                    style={styles.arrow}/>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -37,18 +41,18 @@ export default class App extends Component {
                 <Text style={styles.boxText}>電子信箱</Text>  
                 <View>
                     <TouchableOpacity>
-                        <Icon name='keyboard-arrow-right'  color='#666666'
-                            size={40}></Icon> 
+                    <Image source={require('../../img/arrowRight.png')}
+                    style={styles.arrow}/> 
                     </TouchableOpacity>
                 </View>
             </View>
 
-            <View style={styles.boxView}>
+            <View style={styles.boxBottomBorderView}>
                 <Text style={styles.boxText}>密碼</Text>  
                 <View>
                     <TouchableOpacity>
-                        <Icon name='keyboard-arrow-right'  color='#666666'
-                            size={40}></Icon> 
+                    <Image source={require('../../img/arrowRight.png')}
+                    style={styles.arrow}/>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -73,6 +77,10 @@ const styles = StyleSheet.create({
     container:{
         flex:1,     
     },
+    arrow:{
+        height:30,
+        width:30,
+    },
     headView:{
         height:45,
         backgroundColor:'#f6b456',
@@ -82,7 +90,7 @@ const styles = StyleSheet.create({
     },
     headText:{
         color:'#666666',
-        fontSize:25,
+        fontSize:20,
     },
     fake:{
         width:50,
@@ -100,13 +108,32 @@ const styles = StyleSheet.create({
         borderBottomColor:'#EDEDED',
         height:40
     },
+    boxBottomBorderView:{
+        flexDirection:'row',
+        justifyContent: 'space-between',
+        alignItems:'center',
+        borderBottomWidth:3,
+        borderBottomColor:'#EDEDED',
+        height:40
+    },
     boxText:{
-        fontSize:20,
+        fontSize:18,
         color:'#666666',
         
     },
-    
-       
+    boxFirstText:{
+        fontSize:18,
+        color:'#666666',
+        fontWeight:'bold'
+    },
+    redText:{
+        fontSize:10,
+        color:'#ff0000'
+    },
+    mailText:{
+        fontSize:12,
+        color:'#666666'
+    },
    
     tabBar:{
         height:50,

@@ -25,72 +25,55 @@ export default class App extends Component {
             placeholder='搜尋'
           />
 
-          <View styles={styles.searchView}>
+          
 
-          <View style={styles.blackL}>
-            <ImageBackground source={require('../../img/dog.jpg')} imageStyle={styles.searchL}
+          
+            <ImageBackground source={require('../../img/dog.jpg')} imageStyle={styles.searchConL}
               style={styles.searchConL}>
-              
+              <View style={styles.blackL}>
                 <View style={styles.clubTopTextView}>
                   <Text style={styles.clubNameText}>狗醫師社</Text>
-                  <Text style={styles.clubLeaderText}>社長 Emmal</Text>
+                  <Text style={styles.clubSchoolText}>長庚大學</Text>
                 </View>
-                <View style={styles.clubIntroTextView}>
-                <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+                <View style={styles.clubIntroView}>
+                  <Text style={styles.clubIntroText}>社團時間:周一~周五18:00~19:30</Text>
+                  <Text style={styles.clubIntroText}>溜溜狗</Text>
+                  <Text style={styles.clubIntroText}>指導老師:Dr.dog</Text>
                 </View>
               
-
+                </View>
             </ImageBackground>
-            </View>
+          
           
 
             <View style={styles.beFlexEnd}>
-              <ImageBackground source={require('../../img/flower.jpg')} imageStyle={styles.searchR}
+              <ImageBackground source={require('../../img/flower.jpg')} imageStyle={styles.searchConR}
                 style={styles.searchConR}>
-              
-                <View style={styles.clubText}>
-                  <View style={styles.clubTopText}>
-                    <Text style={styles.clubNameText}>紫藤花社</Text>
-                    <Text style={styles.clubLeaderText}>社長 Emmal</Text>
-                  </View>
-                  <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
+              <View style={styles.blackR}>
+              <View style={styles.clubTopTextView}>
+              <Text style={styles.clubNameText}>紫藤花社</Text>
+              <Text style={styles.clubSchoolText}>長庚大學</Text>
+            </View>
+            <View style={styles.clubIntroView}>
+              <Text style={styles.clubIntroText}>社團時間:周一~周五18:00~19:30</Text>
+              <Text style={styles.clubIntroText}>美姿美儀，美麗皮膚管理</Text>
+              <Text style={styles.clubIntroText}>指導老師:Dr.flower</Text>
+            </View>
+          
                 </View>
-                
               </ImageBackground>
             </View>
 
 
-            <ImageBackground source={require('../../img/kongfu.jpg')} imageStyle={styles.searchL}
-              style={styles.searchConL}>
-              <View style={styles.clubText}>
-                <View style={styles.clubTopText}>
-                  <Text style={styles.clubNameText}>空手道社</Text>
-                  <Text style={styles.clubLeaderText}>社長 Emmal</Text>
-                </View>
-                <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
-              </View>
-
-            </ImageBackground>
+            <View style={styles.blackL}/>
+        
 
 
-            <View style={styles.beFlexEnd}>
-              <ImageBackground source={require('../../img/dance.jpg')} imageStyle={styles.searchR}
-                style={styles.searchConR}>
-
-                <View style={styles.clubText}>
-                  <View style={styles.clubTopText}>
-                    <Text style={styles.clubNameText}>舞蹈社</Text>
-                    <Text style={styles.clubLeaderText}>社長 Emmal</Text>
-                  </View>
-                  <Text style={styles.clubIntroText}>hoijhnicwmhriurhcwunoig</Text>
-                </View>
-
-              </ImageBackground>
-            </View>
+            
 
 
 
-          </View>
+         
         </ScrollView>
 
 
@@ -123,74 +106,66 @@ const styles = StyleSheet.create({
     backgroundColor: '#f1c483',
 
   },
-  searchView: {
-    flex: 15,
-  },
+  
 
   blackL:{
-    backgroundColor:'#000000',
+    backgroundColor:'rgba(0,0,0,0.5)',
     height: 125,
     width: 350,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderTopRightRadius: 40,
     borderBottomRightRadius: 40,
-    shadowOffset: { width: 5, height: 5, },
+    shadowOffset: { width: 1, height: 1 },
     shadowColor: '#000000',
     shadowRadius: 10,
     shadowOpacity: 0.5,
-    marginBottom: 20,
     elevation: 10,
-  },
-  searchL: {
-    borderTopRightRadius: 40,
-    borderBottomRightRadius: 40,
     
-    //borderRadius:40,
-    
-
   },
-  searchR: {
-     borderTopLeftRadius: 40,
-     borderBottomLeftRadius: 40,
-    //borderRadius: 40,
-   
-
+  blackR:{
+    backgroundColor:'rgba(0,0,0,0.5)',
+    height: 125,
+    width: 350,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderTopLeftRadius:40,
+    borderBottomLeftRadius: 40,
+    shadowOffset: { width: 1, height: 1 },
+    shadowColor: '#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.5,
+    elevation: 10,
+    
   },
 
   searchConR: {
     height: 125,
     width: 350,
-    backgroundColor: '#9d9d9d',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    shadowOffset: { width: 5, height: 5, },
-    shadowColor: '#000000',
-    shadowRadius: 10,
-    shadowOpacity: 0.5,
-    marginBottom: 20,
-    elevation: 10,
+    marginBottom: 5,
     borderTopLeftRadius:40,
     borderBottomLeftRadius: 40,
     overflow:'hidden',
-    opacity:0.5,
+    borderTopLeftRadius: 40,
+    borderBottomLeftRadius: 40,
   },
   searchConL: {
     height: 125,
     width: 350,
-    backgroundColor: '#9d9d9d',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    shadowOffset: { width: 5, height: 5, },
-    shadowColor: '#000000',
-    shadowRadius: 10,
-    shadowOpacity: 0.5,
-    marginBottom: 20,
-    elevation: 10,
+    marginBottom: 5,
     borderTopRightRadius: 40,
     borderBottomRightRadius: 40,
     overflow:'hidden',
-    opacity:0.5,
+    borderTopRightRadius: 40,
+    borderBottomRightRadius: 40,
   },
   beFlexEnd: {
     flexDirection: 'row',
@@ -199,35 +174,33 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 40,
     
   },
-  clubText: {
-    padding: 20,
-    backgroundColor: '#ffffff',
-    opacity: 0.7,
-  },
+  
   clubTopTextView: {
     flexDirection: 'row',
-    //backgroundColor:'rgba(255, 255, 255, 0.5)',
+    alignItems:'flex-end',
   },
   clubNameText: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
     color: '#ffffff',
-    opacity: 1,
+    
   },
-  clubLeaderText: {
-    fontSize: 10,
+  clubSchoolText: {
+    fontSize: 12,
     padding: 2,
     color: '#ffffff',
-    opacity: 1,
-  },
-  clubIntroTextView:{
-    backgroundColor:'rgba(255, 255, 255, 0.8)',
-
-  },
-  clubIntroText: {
-    padding: 8,
-    color: '#000000',
     
+  },
+  clubIntroView:{
+    backgroundColor:'rgba(255, 255, 255, 0.3)',
+    justifyContent:'center',
+    alignItems:'center',
+    padding:5,
+    margin:5,
+  },
+  clubIntroText:{
+    fontSize:17,
+    color:'#ffffff'
   },
   tabBar: {
     height: 50,

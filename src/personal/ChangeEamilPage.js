@@ -6,7 +6,7 @@ import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 
 
-
+ 
 export default class App extends Component {
   render() {
     return (
