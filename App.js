@@ -11,8 +11,8 @@ import RegisteredPage from './src/login/RegisteredPage'
 
 //首頁
 import HomePage from './src/home/HomePage.js'
-import ActivitesPage from './src/home/ActivitesPage'
-import SelectTypePage from './src/home/SelectTypePage'
+import ActivitesPage from './src/home/HomeActivitiesActivitesPage'
+import SelectTypePage from './src/home/SelectingPage'
 
 //搜尋頁
 import SearchPage from './src/search/SearchPage'
