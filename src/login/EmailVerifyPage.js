@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
-import { Text, 
-         View, 
-         StyleSheet,
-         KeyboardAvoidingView,
-         TouchableOpacity,
-         ImageBackground
-         } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  KeyboardAvoidingView,
+  TouchableOpacity,
+  ImageBackground
+} from 'react-native';
 import { Constants } from 'expo';
+import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 
-export default class Form extends Component{
-render(){
-  return(
- <ImageBackground
-  style={styles.bf}
-  source={require('../../img/myboyfriend.jpg')}
-  imageStyle={{ resizeMode: 'cover' }}
-  > 
-    <View style={styles.container}> 
+export default class Form extends Component {
+  render() {
+    return (
+      <ImageBackground
+        style={styles.bf}
+        source={require('../../img/myboyfriend.jpg')}
+        imageStyle={{ resizeMode: 'cover' }}
+      >
+        <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
+        <StatusBar hidden={false} height={50}
+          backgroundColor={'#f6b456'} />
+        <View style={styles.container}>
           <Text style={styles.title}>信箱驗證</Text>
           <Text style={styles.send}>已寄驗證信至</Text>
           <Text style={styles.mail}>abc123@iclub.com</Text>
@@ -30,80 +35,80 @@ render(){
             <Text style={styles.backText}>返回</Text>
           </TouchableOpacity>
           <KeyboardAvoidingView behavior='padding'>
-          </KeyboardAvoidingView> 
-    </View>
-  </ImageBackground>
-  );
-}
+          </KeyboardAvoidingView>
+        </View>
+      </ImageBackground>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-  bf:{
-        flex:1,
-        height:null,
-        width:null
+  bf: {
+    flex: 1,
+    height: null,
+    width: null
   },
-  container:{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection:'column',
-          backgroundColor:'rgba(0,0,0,0.5)'
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    backgroundColor: 'rgba(0,0,0,0.5)'
   },
-  title:{
-    color:'white',
-    fontSize:35,
+  title: {
+    color: 'white',
+    fontSize: 35,
     alignSelf: 'center',
-    marginBottom:90
+    marginBottom: 90
   },
-  send:{
-    color:'white',
-    fontSize:18,
+  send: {
+    color: 'white',
+    fontSize: 18,
     alignSelf: 'center',
-    margin:5
+    margin: 5
   },
-  mail:{
-    color:'white',
-    fontSize:18,
+  mail: {
+    color: 'white',
+    fontSize: 18,
     fontWeight: 'bold',
     alignSelf: 'center',
-    margin:5
+    margin: 5
   },
-  againBotton:{
-    backgroundColor:'rgba(255,255,255,0.4)',
-    margin:35,
-    borderWidth:1,
-    borderColor:'white',
-    width:230,
-    height:37,
-    borderRadius:7,
-    justifyContent:'center'
+  againBotton: {
+    backgroundColor: 'rgba(255,255,255,0.4)',
+    margin: 35,
+    borderWidth: 1,
+    borderColor: 'white',
+    width: 230,
+    height: 37,
+    borderRadius: 7,
+    justifyContent: 'center'
   },
-  againText:{
-    color:'white',
-    fontSize:15,
+  againText: {
+    color: 'white',
+    fontSize: 15,
     alignSelf: 'center'
   },
-  loginBotton:{
-    backgroundColor:'rgba(255,255,255,0)',
-    margin:43,
-    borderWidth:1,
-    borderColor:'white',
-    width:140,
-    height:35,
+  loginBotton: {
+    backgroundColor: 'rgba(255,255,255,0)',
+    margin: 43,
+    borderWidth: 1,
+    borderColor: 'white',
+    width: 140,
+    height: 35,
     borderRadius: 50,
-    justifyContent:'center'
+    justifyContent: 'center'
   },
-  loginText:{
-    color:'white',
-    fontSize:15,
+  loginText: {
+    color: 'white',
+    fontSize: 15,
     alignSelf: 'center'
   },
-  backText:{
-    color:'white',
-    fontSize:15,
+  backText: {
+    color: 'white',
+    fontSize: 15,
     alignSelf: 'center',
-    paddingTop:5
+    paddingTop: 5
   }
- 
+
 })
