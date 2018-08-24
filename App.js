@@ -4,10 +4,12 @@ import { StyleSheet, Text, View } from 'react-native';
 
 //登入頁
 import EmailVerifyPage from './src/login/EmailVerifyPage'
-import ForgotEmailPage from './src/login/ForgotEmailPage'
+import ForgotPasswordPage from './src/login/ForgotPasswordPage'
 import LoginPage from './src/login/LoginPage'
 import NickNamePage from './src/login/NickNamePage'
 import RegisteredPage from './src/login/RegisteredPage'
+import PhotoPage from './src/login/PhotoPage'
+import SendEamilResultPage from './src/login/SendEamilResultPage'
 
 //首頁
 import HomePage from './src/home/HomePage.js'
@@ -49,10 +51,12 @@ export default class App extends React.Component {
     return (
       //登入頁
       <EmailVerifyPage />
-      <ForgotEmailPage />
+      <ForgotPasswordPage />
       <LoginPage />
       <NickNamePage />
       <RegisteredPage />
+      <PhotoPage />
+      <SendEamilResultPage />
 
       //首頁
       <HomePage />
