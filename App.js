@@ -4,10 +4,12 @@ import { StyleSheet, Text, View } from 'react-native';
 
 //登入頁
 import EmailVerifyPage from './src/login/EmailVerifyPage'
-import ForgotPswPage from './src/login/ForgotPswPage'
+import ForgotPasswordPage from './src/login/ForgotPasswordPage'
 import LoginPage from './src/login/LoginPage'
 import NickNamePage from './src/login/NickNamePage'
 import RegisteredPage from './src/login/RegisteredPage'
+import PhotoPage from './src/login/PhotoPage'
+import SendEamilResultPage from './src/login/SendEamilResultPage'
 
 //首頁
 import HomePage from './src/home/HomePage.js'
@@ -16,6 +18,7 @@ import SelectTypePage from './src/home/SelectingPage'
 
 //搜尋頁
 import SearchPage from './src/search/SearchPage'
+import CalendarDetailsPage from './src/calendar/CalendarDetailsPage'
 
 //社團頁
 import ClubPage from './src/club/ClubPage.js'
@@ -26,7 +29,6 @@ import ActiviesPage from './src/club/ActiviesPage.js'
 
 //行事曆頁
 import CalendarPage from './src/calendar/CalendarPage.js'
-import CalendarDetailsPage from './src/calendar/CalendarDetailsPage'
 
 //個人頁面
 import AdvancedSettingPage from './src/personal/AdvancedSettingPage'
@@ -38,6 +40,7 @@ import JoinedClubPage from './src/personal/JoinedClubPage'
 import NotificationPage from './src/personal/NotificationPage'
 import ProfilePage from './src/personal/ProfilePage'
 import ProfileSettingPage from './src/personal/ProfileSettingPage'
+import SendEmailSuccessfulPage from './src/personal/SendEmailSuccessfulPage'
 
 
 
@@ -48,10 +51,12 @@ export default class App extends React.Component {
     return (
       //登入頁
       //<EmailVerifyPage />
-      //<ForgotEmailPage />
+      //<ForgotPasswordPage />
       //<LoginPage />
       //<NickNamePage />
       //<RegisteredPage />
+      //<PhotoPage />
+      //<SendEamilResultPage />
 
       //首頁
       //<HomePage />
@@ -81,7 +86,8 @@ export default class App extends React.Component {
       //<JoinedClubPage />
       //<NotificationPage />
       //<ProfilePage />
-      <ProfileSettingPage />
+      //<ProfileSettingPage />
+      //<SendEmailSuccessfulPage />
     );
   }
 }
