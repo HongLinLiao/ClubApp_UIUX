@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     },
     name: {
         color: '#666666',
-        fontSize: 28,
+        fontSize: 25,
         marginBottom: 10
     },
     row: {
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255,255,255,0.5)',
         borderRadius: 25,
         justifyContent: 'center',
-        marginBottom: 15
+        marginBottom: 10
     },
     aboutMeText: {
         color: '#666666',

@@ -14,7 +14,7 @@ import SendEamilResultPage from './src/login/SendEamilResultPage'
 //首頁
 import HomePage from './src/home/HomePage.js'
 import ActivitesPage from './src/home/HomeActivitiesActivitesPage'
-import SelectTypePage from './src/home/SelectingPage'
+import SelectingPage from './src/home/SelectingPage'
 
 //搜尋頁
 import SearchPage from './src/search/SearchPage'
@@ -61,7 +61,7 @@ export default class App extends React.Component {
       //首頁
       //<HomePage />
       //<ActivitesPage />
-      //<SelectTypePage />
+      //<SelectingPage />
 
       //搜尋頁
       //<SearchPage />
@@ -83,7 +83,7 @@ export default class App extends React.Component {
       //<ChangePasswordPage />
       //<EmailReVerifiedPage />
       //<FavoriteClubPage />
-      //<JoinedClubPage />
+      <JoinedClubPage />
       //<NotificationPage />
       //<ProfilePage />
       //<ProfileSettingPage />

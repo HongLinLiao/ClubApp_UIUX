@@ -14,6 +14,34 @@ import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 
 export default class Form extends Component {
+
+    state = { //想要預設state就可以這樣宣告一個state把你想要的值放進去
+        name: '', //暱稱
+        aboutMe: '', //介紹
+        nameColor: 'rgba(102,102,102,0.5)', //預設姓名顏色
+        aboutColor: 'rgba(102,102,102,0.5)', //預設介紹顏色
+        nameEditable: false, //預設姓名更改是關閉的
+        aboutEditable: false, //預設介紹更改是關閉的
+    }
+
+    changeAboutEditable = () => { 
+        this.setState({ 
+            aboutEditable: !this.state.aboutEditable,
+            aboutColor: this.state.aboutEditable ? 'rgba(102,102,102,0.5)' : 'rgba(102,102,102,1)'
+        });
+    }
+
+    changeNameEditable = () => {
+        this.setState({  //this.setState( {} )
+            nameEditable: !this.state.nameEditable, //編輯開關
+            nameColor:  this.state.nameEditable ? 'rgba(102,102,102,0.5)' : 'rgba(102,102,102,1)'
+        })
+    }
+
+    componentWillMount() {
+        //就不用在元件安裝的時候設this.setState()雖然是一樣的意思xd
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -31,24 +59,30 @@ export default class Form extends Component {
                     <View style={styles.empty}></View>
                 </View>
 
-                    <ImageBackground 
-                        style={styles.person}
-                        imageStyle={styles.personImage}
-                        source={require('../../img/shownu.jpg')} >
+                <ImageBackground
+                    style={styles.person}
+                    imageStyle={styles.personImage}
+                    source={require('../../img/shownu.jpg')} >
                     <TouchableOpacity>
                         <Image source={require('../../img/camera.png')}
                             style={styles.cameraIcon} />
                     </TouchableOpacity>
-                    </ImageBackground>
+                </ImageBackground>
 
                 <View style={styles.nameView}>
                     <View style={styles.empty}></View>
-                    <TextInput style={styles.nameInput}
+                    <TextInput style={[styles.nameInput, {color: this.state.nameColor}]}  //state變數代姓名顏色
                         placeholder='EJ boyfriend'
-                        placeholderTextColor='#666666'
-                        underlineColorAndroid={'rgba(246,180,86,0)'} />
-                    <Image style={styles.hotPoint}
-                        source={require('../../img/pencil.png')} />
+                        placeholderTextColor='rgba(102,102,102,0.5)'
+                        underlineColorAndroid={'rgba(246,180,86,0)'}
+                        editable={this.state.nameEditable} 
+                        onChangeText={(name) => this.setState({name})}
+                        value={this.state.name}/>
+                    <TouchableOpacity onPress={() => { this.changeNameEditable() }}>
+                        <Image style={styles.hotPoint}
+                            source={require('../../img/pencil.png')} />
+                    </TouchableOpacity>
+
                 </View>
 
                 <View style={styles.row}>
@@ -59,12 +93,17 @@ export default class Form extends Component {
 
                 <View style={styles.aboutMeView}>
                     <View style={styles.empty}></View>
-                    <TextInput style={styles.aboutMeInput}
+                    <TextInput style={[styles.aboutMeInput, {color: this.state.aboutColor}]}  //state變數代表自介顏色
                         placeholder='EJ boyfriend'
-                        placeholderTextColor='#666666'
-                        underlineColorAndroid={'rgba(246,180,86,0)'} />
-                    <Image style={styles.hotPoint}
-                        source={require('../../img/pencil.png')} />
+                        placeholderTextColor='rgba(102,102,102,0.5)'
+                        underlineColorAndroid={'rgba(246,180,86,0)'}
+                        editable={this.state.aboutEditable}
+                        onChangeText={(aboutMe) => this.setState({aboutMe})}
+                        value={this.state.aboutMe}/>
+                    <TouchableOpacity onPress={() => { this.changeAboutEditable() }}>
+                        <Image style={styles.hotPoint}
+                            source={require('../../img/pencil.png')} />
+                    </TouchableOpacity>
                 </View>
 
                 <TouchableOpacity style={styles.save}>
@@ -72,7 +111,7 @@ export default class Form extends Component {
                 </TouchableOpacity>
 
                 <View style={styles.tabBar}></View>
-                
+
                 <KeyboardAvoidingView behavior='padding'>
                 </KeyboardAvoidingView>
             </View>
@@ -82,7 +121,7 @@ export default class Form extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 15,
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'column',
@@ -110,18 +149,19 @@ const styles = StyleSheet.create({
     },
     person: {
         marginTop: 50,
+        marginBottom: 50,
         width: 130,
         height: 130,
         justifyContent: 'flex-end',
         alignItems: 'center'
     },
-    personImage:{
+    personImage: {
         borderRadius: 65
     },
     cameraIcon: {
         height: 30,
         width: 30,
-        margin:5
+        margin: 5
     },
     nameView: {
         flexDirection: 'row',
@@ -132,13 +172,13 @@ const styles = StyleSheet.create({
         height: 50,
         borderBottomWidth: 2,
         borderWidth: 0,
-        borderColor: 'rgba(246,180,86,0.2)',
-        marginBottom:10
+        borderColor: 'rgba(246,180,86,0.4)',
+        marginBottom: 10
     },
     nameInput: {
         width: 225,
         height: 50,
-        color: '#666666',
+        // color: '#666666',
         backgroundColor: 'rgba(246,180,86,0)',
         textAlign: 'center',
         fontSize: 30
@@ -167,8 +207,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(246,180,86,0)',
         borderWidth: 2,
         borderRadius: 20,
-        borderColor: 'rgba(246,180,86,0.2)',
-        marginTop:10
+        borderColor: 'rgba(246,180,86,0.4)',
+        marginTop: 10
     },
     aboutMeInput: {
         width: 225,
@@ -184,7 +224,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
         backgroundColor: 'rgba(246,180,86,0)',
         borderWidth: 2,
-        borderColor: 'rgba(246,180,86,0.4)',
+        borderColor: 'rgba(246,180,86,0.6)',
         justifyContent: 'center'
     },
     saveText: {
