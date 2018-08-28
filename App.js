@@ -83,8 +83,8 @@ export default class App extends React.Component {
       //<ChangePasswordPage />
       //<EmailReVerifiedPage />
       //<FavoriteClubPage />
-      <JoinedClubPage />
-      //<NotificationPage />
+      // <JoinedClubPage />
+      <NotificationPage />
       //<ProfilePage />
       //<ProfileSettingPage />
       //<SendEmailSuccessfulPage />
