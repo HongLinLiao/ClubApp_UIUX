@@ -55,11 +55,11 @@ export default class App extends React.Component {
       //<RegisteredPage />
 
       //首頁
-      //<HomePage />
+      <HomePage />
       //<ActivitesPage />
       //<SelectTypePage />
 
-      //搜尋頁 我
+      //搜尋頁 
       //<SearchPage />
 
       //社團頁
@@ -69,9 +69,9 @@ export default class App extends React.Component {
       //<PostsPage />
       //<ActiviesPage />
 
-      //行事曆頁 我
+      //行事曆頁 
       //<CalendarPage />
-      <CalendarDetailsPage />
+      //<CalendarDetailsPage />
 
       //個人設定頁
       //<AdvancedSettingPage /> //進階設定頁面 

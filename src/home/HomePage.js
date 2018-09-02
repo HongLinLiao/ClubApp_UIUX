@@ -10,7 +10,7 @@ import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 export default class App extends Component {
 render() {
     return (
-      <View style={styles.container}>
+    <View style={styles.container}>
         <StatusBarPaddingIOS style={{backgroundColor: '#f6b456'}}/>
         <View style={styles.headView}>
             <View style={styles.fake}></View>
@@ -25,44 +25,46 @@ render() {
 
         <ScrollView>
         <View style={styles.containView}>
-            <View style={styles.box}>
-                <View style={styles.clubImageView}>
-                    <Image source={require('../../img/dogMan.jpg')}
-                        style={styles.clubImage}
-                        imageStyle={styles.clubImage}
-                    />
-                </View>
-                <View style={styles.clubTextView}>
-                    <View style={styles.topTextView}>
-                        <View style={styles.clubNameView}>
-                        <Text style={styles.clubNameText}>狗醫師社 </Text>
-                        </View>
-                        <View style={styles.clubManagerView}>
-                        <Text style={styles.clubManagerText}>社長 Lucky</Text>
-                        </View>
-                    </View>
-                    <View style={styles.midTextView}>
-                        <View style={styles.clubActView}>
-                        <Text style={styles.clubActText}>期初社大</Text>
-                        </View>
-                        <View style={styles.clubActInfoView}>
-                        <Text style={styles.clubActInfoText}>大家快點來參加期初社大吃PIZZA</Text>
-                        </View>
-                    </View>
-                    <View style={styles.bottomTextView}>
-                        <Text style={styles.dateText}>2018/07/29</Text>
-                        <View style={styles.sawView}>
-                            <Image source={require('../../img/eye.jpg')}
-                            style={styles.eyeImage}/>
-                            <View style={styles.sawTimesView}>
-                                <Text style={styles.sawTimesText}>1234</Text>
-                            </View>
-                        </View>
-                </View>
-                </View>
-                
-                
+        <View style={styles.newsView}>
+        <View style={styles.shadow}>
+        <Image source={require('../../img/dogMan.jpg')}
+            style={styles.managerImageView}
+            imageStyle={styles.managerImageView}/>
+        </View>
+        <View style={styles.newsTextView}>
+        <View style={styles.clubAndManagerNameView}>
+            <Text style={styles.newsClubText}>紫藤花親善社</Text>
+            <Text style={styles.newsManagerText}>社長</Text>
+            <Text style={styles.newsManagerText}>Ann</Text>
+        </View>
+        <View style={styles.actNameAndDateView}>
+            <Text style={styles.newsNameText}>期初社大</Text>
+            <Text style={styles.newsDateText}>2018/09/29</Text>
+        </View>
+        <View style={styles.newsContentView}>
+            <Text style={styles.newsContentText}>dfghjkldfghjkzxcvbnmxcvbnmfgtyh</Text>
+            <TouchableOpacity><Text style={styles.newsContentText}>...more</Text></TouchableOpacity>
+        </View>
+        <View style={styles.iconView}>
+            <View style={styles.aIcon}>
+            <Image source={require('../../img/message.png')}
+            style={styles.icon}/>
+            <Text style={styles.iconNumber}>98</Text> 
             </View>
+            <View style={styles.aIcon}>
+            <Image source={require('../../img/like-gray.png')}
+            style={styles.icon}/>
+            <Text style={styles.iconNumber}>98</Text> 
+            </View>
+            <View style={styles.aIcon}>
+            <Image source={require('../../img/eyes.png')}
+            style={styles.icon}/>
+            <Text style={styles.iconNumber}>98</Text> 
+            </View>
+        </View>
+            
+        </View>
+        </View>
         </View>
         </ScrollView>
         <TouchableOpacity style={styles.star}>
@@ -101,100 +103,97 @@ const styles = StyleSheet.create({
         flex:1,
         padding:15
     },
-    box:{
-        alignItems: 'flex-start',
-        borderBottomWidth:1,
-        borderBottomColor:'#EDEDED',
-        height:120,
-        flexDirection:'row'
-    },
+    newsView: {
+    alignItems: 'flex-start',
+    borderBottomWidth: 1,
+    borderBottomColor: '#EDEDED',
+    height: 115,
+    flexDirection: 'row',
+    padding: 20,
+  },
+shadow:{
+  shadowOffset:{ width: 1, height: 1 },
+    shadowColor:'rgba(102,102,102,1)',
+    shadowRadius: 10,
+    height:50,
+    width:50,
+    borderRadius:30,
+},
+  
+  managerImageView: {
+    height: 50,
+    width: 50,
+    borderRadius: 25,
+  },
+  
+  newsTextView: {
+    paddingLeft:8,
+    flexDirection:'column'
+  },
+  clubAndManagerNameView:{
+    flexDirection:'row',
+    alignItems:'flex-end',
+    paddingBottom:5,
+  },
+  newsClubText:{
+    color:'#666666',
+    paddingRight:5,
+    fontSize:15,
+  },
+  newsManagerText:{
+    color:'#666666',
+    paddingRight:5,
+    fontSize:10,
+  },
+  actNameAndDateView:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'flex-end',
+    paddingTop:5,
+    paddingBottom:5,
+  },
+  newsNameText:{
+    color:'#666666',
+    paddingRight:5,
+    fontSize:23,
     
-    topTextView:{
-        flexDirection:'row',
-        alignItems:'flex-end',
-        padding:5,
-    },
-    clubImageView:{
-        backgroundColor:'#f6b456',
-        height:60,
-        width:60,
-        borderRadius:50,
-        alignItems:'center',
-        justifyContent:'center',
-
-    },
-    clubImage:{
-        height:55,
-        width:55,
-        borderRadius:30,
-        borderWidth:3,
-        borderColor:'#ffffff' 
-    },
-    clubTextView:{
-       // margin:1
-    },
-    clubNameView:{
-        margin:1,
-    },
-    clubNameText:{
-        fontSize:15
-    },
-    clubManagerView:{
-        margin:1,
-    },
-    clubManagerText:{
-        fontSize:10
-
-    },
-    midTextView:{
-        margin:1
-    },
-    clubActView:{
-        margin:1
-    },
-    clubActText:{
-        fontSize:25,
-        fontWeight:'bold'
-    },
-    clubActInfoView:{
-        margin:1,
-    },
-    clubActInfoText:{
-        fontSize:12,
-        
-    },
-    dateText:{
-        fontSize:10,
-    },
-    bottomTextView:{
-        flexDirection:'row',
-        alignItems:'center',
-        justifyContent: 'space-between',
-        width:280,
-        padding:5,
-    },
-    eyeImage:{
-        height:12,
-        width:20,
-    },
-    sawView:{
-        flexDirection:'row',
-        
-        alignItems:'center',
-        //justifyContent: 'space-between',
-    },
-    sawTimesView:{
-        margin:5,
-        alignItems:'center',
-        backgroundColor:'#f6b456',
-        borderRadius:30,
-        height:15,
-        width:40,
-        
-    },
-    sawTimesText:{
-        fontSize:10,
-    },
+  },
+  newsDateText:{
+    color:'#666666',
+    paddingRight:5,
+    fontSize:10,
+  },
+  
+  newsContentView:{
+    flexDirection:'row',
+  },
+  newsContentText:{
+    color:'#666666',
+    fontSize:15,
+  },
+  iconView:{
+    flexDirection:'row',
+    
+    justifyContent:'flex-end',
+    paddingTop:5,
+  },
+  aIcon:{
+    flexDirection:'row',
+    alignItems:'flex-end',
+    justifyContent:'center',
+    paddingRight:10
+  },
+  icon:{
+    
+    height:15,
+    width:15,
+    
+  },
+  iconNumber:{
+    color:'#666666',
+    fontSize:10,
+    paddingLeft:2
+  },
     star:{
         justifyContent:'flex-end',
         alignItems:'flex-end',
