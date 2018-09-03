@@ -24,6 +24,7 @@ import ClubCalendarPage from './src/club/ClubCalendarPage.js'
 import ClubStoriesPage from './src/club/ClubStoriesPage.js'
 import PostsPage from './src/club/PostsPage.js'
 import ActiviesPage from './src/club/ActiviesPage.js'
+import ClubAdminPage from './src/club/ClubAdminPage.js'
 
 //行事曆頁
 import CalendarPage from './src/calendar/CalendarPage.js'
@@ -38,6 +39,7 @@ import JoinedClubPage from './src/personal/JoinedClubPage'
 import NotificationPage from './src/personal/NotificationPage'
 import ProfilePage from './src/personal/ProfilePage'
 import ProfileSettingPage from './src/personal/ProfileSettingPage'
+import SendEmailSuccessfulPage from './src/personal/SendEmailSuccessfulPage'
 
 
 
@@ -55,8 +57,8 @@ export default class App extends React.Component {
       //<RegisteredPage />
 
       //首頁
-      <HomePage />
-      //<ActivitesPage />
+      //<HomePage />
+      <ActivitesPage />
       //<SelectTypePage />
 
       //搜尋頁 
@@ -68,21 +70,23 @@ export default class App extends React.Component {
       //<ClubStoriesPage />
       //<PostsPage />
       //<ActiviesPage />
+      //<ClubAdminPage />
 
       //行事曆頁 
       //<CalendarPage />
       //<CalendarDetailsPage />
 
       //個人設定頁
-      //<AdvancedSettingPage /> //進階設定頁面 
-      //<ChangeEamilPage />  //電子信箱驗證
-      //<ChangePasswordPage /> //變更密碼
-      //<EmailReVerifiedPage />  //驗證確認
-      //<FavoriteClubPage /> //收藏社團管理
-      //<JoinedClubPage /> //參加社團管理
-      //<NotificationPage /> //通知設定
-      //<ProfilePage /> //個人頁面
-      //<ProfileSettingPage /> //編輯個人頁面
+      //<AdvancedSettingPage /> 
+      //<ChangeEamilPage />  
+      //<ChangePasswordPage /> 
+      //<EmailReVerifiedPage />  
+      //<FavoriteClubPage /> 
+      //<JoinedClubPage /> 
+      //<NotificationPage /> 
+      //<ProfilePage /> 
+      //<ProfileSettingPage /> 
+      //<SendEmailSuccessfulPage />
     );
   }
 }

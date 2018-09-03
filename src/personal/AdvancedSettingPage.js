@@ -32,7 +32,7 @@ export default class App extends Component {
                 <View>
                     <TouchableOpacity>
                     <Image source={require('../../img/arrowRight.png')}
-                    style={styles.arrow}/>
+                    style={styles.arrowRight}/>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -42,7 +42,7 @@ export default class App extends Component {
                 <View>
                     <TouchableOpacity>
                     <Image source={require('../../img/arrowRight.png')}
-                    style={styles.arrow}/> 
+                    style={styles.arrowRight}/> 
                     </TouchableOpacity>
                 </View>
             </View>
@@ -52,7 +52,7 @@ export default class App extends Component {
                 <View>
                     <TouchableOpacity>
                     <Image source={require('../../img/arrowRight.png')}
-                    style={styles.arrow}/>
+                    style={styles.arrowRight}/>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -105,26 +105,32 @@ const styles = StyleSheet.create({
         alignItems:'center',
         //padding:10,
         borderBottomWidth:1,
-        borderBottomColor:'#EDEDED',
+        borderBottomColor:'rgba(102,102,102,0.15)',
         height:40
     },
     boxBottomBorderView:{
         flexDirection:'row',
         justifyContent: 'space-between',
         alignItems:'center',
-        borderBottomWidth:3,
-        borderBottomColor:'#EDEDED',
+        borderBottomWidth:1,
+        borderBottomColor:'rgba(102,102,102,0.5)',
         height:40
     },
     boxText:{
         fontSize:18,
         color:'#666666',
-        
+        padding:10,
     },
     boxFirstText:{
         fontSize:18,
         color:'#666666',
-        fontWeight:'bold'
+        fontWeight:'bold',
+        padding:10,
+    },
+    arrowRight:{
+        height:20,
+        width:20,
+        paddingRight: 20,
     },
     redText:{
         fontSize:10,
@@ -132,7 +138,7 @@ const styles = StyleSheet.create({
     },
     mailText:{
         fontSize:12,
-        color:'#666666'
+        color:'rgba(102,102,102,0.25)',
     },
    
     tabBar:{
