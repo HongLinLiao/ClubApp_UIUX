@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
-
+import ModalDropdown from 'react-native-modal-dropdown';
 
 export default class App extends React.Component {
   render() {
@@ -42,7 +42,7 @@ export default class App extends React.Component {
               </TouchableOpacity>
             </View>
           </ImageBackground>
-
+          
           <View style={styles.adminButtonView}>
             <TouchableOpacity>
               <View style={styles.adminButton}>
@@ -68,7 +68,7 @@ export default class App extends React.Component {
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.adminButton}>
-                <View style={styles.adminIcon} />//插入圖示
+                <View style={styles.adminIcon} />
                 <Text style={styles.adminText}>編輯成員</Text>
               </View>
             </TouchableOpacity>

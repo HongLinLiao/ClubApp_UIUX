@@ -24,7 +24,7 @@ export default class App extends Component {
                     <View style={styles.fake}></View>
                 </View>
                 <View style={styles.containView}>
-
+                    <View style={styles.upView}>
                     <View style={styles.passwordView}>
                         <Text style={styles.passwordText}>輸入新的電子信箱</Text>
                         <TextInput style={styles.passwordInput}></TextInput>
@@ -32,19 +32,17 @@ export default class App extends Component {
 
                     <View style={styles.passwordView}>
                         <Text style={styles.passwordText}>輸入登入密碼</Text>
-                        <TextInput style={styles.passwordInput}></TextInput>
+                        <TextInput style={styles.passwordInput}
+                        secureTextEntry={true}></TextInput>
                     </View>
-
-                    <View style={styles.buttonView}>
-                        <Button
-                            title='確認'
-
-                            color='#666666'
-                            fontSize={18}
-                            backgroundColor='#fbdaa7'
-                            borderRadius={10}
-                            buttonStyle={styles.button} />
                     </View>
+                    <TouchableOpacity style={styles.buttonView}>
+                        <Text style={styles.button}>確認</Text>
+
+
+
+
+                    </TouchableOpacity>
 
                     <Text style={styles.redText}>請至您的電子信箱確認</Text>
 
@@ -71,6 +69,7 @@ const styles = StyleSheet.create({
     arrow: {
         height: 30,
         width: 30,
+        marginLeft: 10,
     },
     headText: {
         color: '#666666',
@@ -83,17 +82,21 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
 
-
+    upView:{
+        marginBottom: 40,
+    },
     mailView: {
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
-        // borderWidth:1,
+        borderWidth: 1,
     },
     userMail: {
         padding: 15,
+        borderWidth: 1,
     },
     mailText: {
         fontSize: 18,
@@ -101,14 +104,13 @@ const styles = StyleSheet.create({
         color: '#666666'
     },
     userMailText: {
-
         color: '#666666'
     },
     passwordView: {
         justifyContent: 'center',
         alignItems: 'center',
-        padding: 20,
-
+        marginBottom: 40,
+    
     },
     passwordText: {
         fontSize: 18,
@@ -120,20 +122,29 @@ const styles = StyleSheet.create({
         width: 250,
         height: 40,
         borderRadius: 10,
-
+        color: '#666666'
     },
 
     buttonView: {
-        padding: 10,
-    },
-    button: {
-        width: 170,
+        width: 160,
         height: 45,
-        shadowOffset: { width: 0.5, height: 0.5, },
+        backgroundColor: '#fbdaa7',
+        justifyContent: 'center',
+        alignItems:'center',
+        borderRadius:22,
+        marginBottom: 8,
+        shadowOffset: { width: 1, height: 1 },
         shadowColor: '#000000',
         shadowRadius: 10,
-        shadowOpacity: 0.1,
-        elevation: 10,
+        shadowOpacity: 0.2,
+        elevation: 5,
+    },
+    button: {
+        color: '#666666',
+        fontSize: 18,
+
+        borderRadius: 10,
+
 
     },
     redText: {

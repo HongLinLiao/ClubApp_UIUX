@@ -58,7 +58,7 @@ export default class App extends Component {
                   <View style={styles.oneDateView}><Text style={styles.dateText}>5</Text></View>
                   <View style={styles.oneDateView}><Text style={styles.dateText}>6</Text></View>
                   <View style={styles.oneDateView}><Text style={styles.dateText}>7</Text></View>
-                  <View style={styles.eventDateView}><Text style={styles.dateText}>8</Text></View>
+                  <TouchableOpacity style={styles.eventDateView}><Text style={styles.dateText}>8</Text></TouchableOpacity>
                   <View style={styles.todayDateView}><Text style={styles.dateText}>9</Text></View>
                   <View style={styles.oneDateView}><Text style={styles.dateText}>10</Text></View>
                   <View style={styles.oneDateView}><Text style={styles.dateText}>11</Text></View>
@@ -103,22 +103,22 @@ export default class App extends Component {
               </View>
             <ScrollView horizontal={true}>
             <View style={styles.activityPoster}>
-              <View style={styles.posters}>
+              <TouchableOpacity style={styles.posters}>
               <Image source={require('../../img/poster1.jpg')} style={styles.posters}>
                 </Image>
-              </View>
-              <View style={styles.posters}>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.posters}>
               <Image source={require('../../img/poster2.jpg')} style={styles.posters}>
                 </Image>
-              </View>
-              <View style={styles.posters}>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.posters}>
               <Image source={require('../../img/poster3.jpg')} style={styles.posters}>
                 </Image>
-              </View>
-              <View style={styles.posters}>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.posters}>
               <Image source={require('../../img/poster4.jpg')} style={styles.posters}>
                 </Image>
-              </View>
+              </TouchableOpacity>
             </View>
             </ScrollView>
             </View>

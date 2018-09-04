@@ -9,6 +9,7 @@
     "react-native-action-button": "^2.8.4",
     "react-native-elements": "^0.19.1",
     "react-native-ios-status-bar-padding": "^1.2.0",
+    "react-native-modal-dropdown": "^0.6.2",
     "react-navigation": "^2.11.2"
   }
 }

@@ -32,7 +32,9 @@ export default class App extends Component {
                     </View>
                     <View style={styles.passwordView}>
                         <Text style={styles.passwordText}>輸入登入密碼</Text>
-                        <TextInput style={styles.passwordInput}></TextInput>
+                        <TextInput style={styles.passwordInput}
+                        secureTextEntry={true}
+                        underlineColorAndroid={'transparent'}></TextInput>
                     </View>
 
 
@@ -68,6 +70,7 @@ const styles = StyleSheet.create({
     arrow: {
         height: 30,
         width: 30,
+        marginLeft:10,
     },
     headText: {
         color: '#666666',
@@ -99,7 +102,7 @@ const styles = StyleSheet.create({
     },
     userMailText: {
 
-        color: '#666666'
+        color: 'rgba(102,102,102,0.5)'
     },
     passwordView: {
         justifyContent: 'center',
@@ -117,12 +120,13 @@ const styles = StyleSheet.create({
         width: 200,
         height: 40,
         borderRadius: 10,
-
+        color: '#666666',
+        justifyContent:'center'
     },
     send: {
         height: 20,
         width: 20,
-        padding: 3,
+        marginRight: 5,
     },
     buttonView: {
 

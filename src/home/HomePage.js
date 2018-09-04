@@ -42,8 +42,10 @@ export default class App extends Component {
                                     <Text style={styles.newsDateText}>2018/09/29</Text>
                                 </View>
                                 <View style={styles.newsContentView}>
-                                    <Text style={styles.newsContentText}>dfghjkldfghjkzxcvbnmxcvbnmfgtyh</Text>
-                                    <TouchableOpacity><Text style={styles.newsContentText}>...more</Text></TouchableOpacity>
+                                    <Text numberOfLines={3} ellipsizeMode='tail' style={styles.newsContentText}>dfghjkldfghjkzxcvbnmxcvdfghdfghjkldfghjkzxcvbnmadfsggdfghdghxcvdfghksndksndsnkdnkjsndk
+                                    <Text style={styles.moreText}>...more</Text>
+                                    </Text>
+                                    
                                 </View>
                                 <View style={styles.iconView}>
                                     <View style={styles.aIcon}>
@@ -112,11 +114,12 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         borderBottomWidth: 1,
         borderBottomColor: 'rgba(102,102,102,0.25)',
-        height: 100,
+        height: 160,
         flexDirection: 'row',
         marginLeft: 5,
         marginRight: 5,
         marginTop: 5,
+        
     },
     shadow: {
         shadowOffset: { width: 1, height: 1 },
@@ -131,17 +134,22 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 25,
-
+        flex:1,
+        
     },
-
+    
     newsTextView: {
-        paddingLeft: 8,
-        flexDirection: 'column'
+        marginLeft: 8,
+        marginRight:8,
+        flexDirection: 'column',
+       
+        flex:8,
     },
     clubAndManagerNameView: {
+        flex:1,
         flexDirection: 'row',
         alignItems: 'flex-end',
-        paddingBottom: 5,
+        marginBottom: 5,
     },
     newsClubText: {
         color: '#666666',
@@ -150,57 +158,61 @@ const styles = StyleSheet.create({
     },
     newsManagerText: {
         color: '#666666',
-        paddingRight: 5,
         fontSize: 10,
     },
     actNameAndDateView: {
+        flex:1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'flex-end',
-        paddingTop: 5,
-        paddingBottom: 5,
+        alignItems: 'center',
+        marginBottom: 5,
+       
     },
     newsNameText: {
         color: '#666666',
-        paddingRight: 5,
         fontSize: 23,
 
     },
     newsDateText: {
         color: '#666666',
-        paddingRight: 5,
         fontSize: 10,
     },
 
     newsContentView: {
-        flexDirection: 'row',
+        flex:3,
+       
     },
     newsContentText: {
         color: '#666666',
         fontSize: 15,
+        height: '100%',
+        lineHeight:25,
+    },
+    moreText:{
+        fontSize: 15,
+        color:'#123456',
     },
     iconView: {
+        flex:1,
         flexDirection: 'row',
-
+        alignItems:'center',
         justifyContent: 'flex-end',
-        paddingTop: 5,
+       
     },
     aIcon: {
         flexDirection: 'row',
         alignItems: 'flex-end',
         justifyContent: 'center',
-        paddingRight: 10
+        marginLeft:10,
     },
     icon: {
-
         height: 15,
         width: 15,
-
+        marginRight:3
     },
     iconNumber: {
         color: '#666666',
-        fontSize: 10,
-        paddingLeft: 2
+        fontSize: 11,
     },
     star: {
         position: 'absolute',
@@ -219,7 +231,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 1, height: 1, },
         shadowColor: '#000000',
         shadowRadius: 10,
-        shadowOpacity: 0.5,
+        shadowOpacity: 0.7,
         elevation: 10,
     },
 
