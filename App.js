@@ -23,9 +23,11 @@ import CalendarDetailsPage from './src/calendar/CalendarDetailsPage'
 //社團頁
 import ClubPage from './src/club/ClubPage.js'
 import ClubCalendarPage from './src/club/ClubCalendarPage.js'
-import ClubStoriesPage from './src/club/ClubStoriesPage.js'
 import PostsPage from './src/club/PostsPage.js'
 import ActiviesPage from './src/club/ActiviesPage.js'
+import AddPostPage from './src/club/ActiviesPage'
+import AddActivityPage from './src/club/AddActivityPage'
+import ClubAdminPage from './src/club/ClubAdminPage'
 
 //行事曆頁
 import CalendarPage from './src/calendar/CalendarPage.js'
@@ -41,6 +43,8 @@ import NotificationPage from './src/personal/NotificationPage'
 import ProfilePage from './src/personal/ProfilePage'
 import ProfileSettingPage from './src/personal/ProfileSettingPage'
 import SendEmailSuccessfulPage from './src/personal/SendEmailSuccessfulPage'
+import CreateClubPage from './src/personal/CreateClubPage'
+import ClubPrivateSettingPage from './src/personal/ClubPrivateSettingPage'
 
 
 
@@ -69,9 +73,11 @@ export default class App extends React.Component {
       //社團頁
       <ClubPage />
       <ClubCalendarPage />
-      <ClubStoriesPage />
       <PostsPage />
       <ActiviesPage />
+      <AddPostPage />
+      <AddActivityPage />
+      <ClubAdminPage />
 
       //行事曆頁
       <CalendarPage />
@@ -88,6 +94,8 @@ export default class App extends React.Component {
       <ProfilePage />
       <ProfileSettingPage />
       <SendEmailSuccessfulPage />
+      <CreateClubPage />
+      <ClubPrivateSettingPage />
     );
   }
 }
