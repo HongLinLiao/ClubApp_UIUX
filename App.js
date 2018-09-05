@@ -65,14 +65,14 @@ export default class App extends React.Component {
 
       //首頁
       //<HomePage />
-      <ActivitesPage />
+      //<ActivitesPage />
       //<SelectTypePage />
 
       //搜尋頁 
       //<SearchPage />
 
       //社團頁
-      //<ClubPage />
+      <ClubPage />
       //<ClubCalendarPage />
       //<PostsPage />
       //<ActiviesPage />
