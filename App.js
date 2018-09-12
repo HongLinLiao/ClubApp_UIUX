@@ -13,7 +13,7 @@ import SendEamilResultPage from './src/login/SendEamilResultPage'
 
 //首頁
 import HomePage from './src/home/HomePage.js'
-import ActivitesPage from './src/home/HomeActivitiesActivitesPage'
+import HomeActivtiesPage from './src/home/HomeActivtiesPage'
 import SelectTypePage from './src/home/SelectingPage'
 
 //搜尋頁
@@ -24,7 +24,7 @@ import CalendarDetailsPage from './src/calendar/CalendarDetailsPage'
 import ClubPage from './src/club/ClubPage.js'
 import ClubCalendarPage from './src/club/ClubCalendarPage.js'
 import PostsPage from './src/club/PostsPage.js'
-import ActiviesPage from './src/club/ActiviesPage.js'
+import ActivitiesPage from './src/club/ActivitiesPage'
 import AddPostPage from './src/club/ActiviesPage'
 import AddActivityPage from './src/club/AddActivityPage'
 import ClubAdminPage from './src/club/ClubAdminPage'
@@ -64,7 +64,7 @@ export default class App extends React.Component {
 
       //首頁
       <HomePage />
-      <ActivitesPage />
+      <HomeActivtiesPage />
       <SelectTypePage />
 
       //搜尋頁
@@ -74,7 +74,7 @@ export default class App extends React.Component {
       <ClubPage />
       <ClubCalendarPage />
       <PostsPage />
-      <ActiviesPage />
+      <ActivitiesPage />
       <AddPostPage />
       <AddActivityPage />
       <ClubAdminPage />
