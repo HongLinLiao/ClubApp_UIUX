@@ -18,7 +18,7 @@ import ForgotEmailPage from './src/login/ForgotEmailPage'
 import LoginPage from './src/login/LoginPage'
 import NickNamePage from './src/login/NickNamePage'
 import RegisteredPage from './src/login/RegisteredPage'
-
+ABCD
 
 export default class App extends React.Component {
   render() {
