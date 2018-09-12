@@ -25,7 +25,7 @@ import ClubPage from './src/club/ClubPage.js'
 import ClubCalendarPage from './src/club/ClubCalendarPage.js'
 import PostsPage from './src/club/PostsPage.js'
 import ActivitiesPage from './src/club/ActivitiesPage'
-import AddPostPage from './src/club/ActiviesPage'
+import AddPostPage from './src/club/AddPostPage'
 import AddActivityPage from './src/club/AddActivityPage'
 import ClubAdminPage from './src/club/ClubAdminPage'
 
