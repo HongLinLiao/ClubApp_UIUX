@@ -25,7 +25,7 @@ import ClubPage from './src/club/ClubPage.js'
 import ClubCalendarPage from './src/club/ClubCalendarPage.js'
 import PostsPage from './src/club/PostsPage.js'
 import ActivitiesPage from './src/club/ActivitiesPage'
-import AddPostPage from './src/club/ActiviesPage'
+import AddPostPage from './src/club/AddPostPage'
 import AddActivityPage from './src/club/AddActivityPage'
 import ClubAdminPage from './src/club/ClubAdminPage'
 
@@ -64,7 +64,7 @@ export default class App extends React.Component {
 
       //首頁
       //<HomePage />
-      <HomeActivtiesPage />
+      //<HomeActivtiesPage />
       //<SelectTypePage />
 
       //搜尋頁
@@ -72,7 +72,7 @@ export default class App extends React.Component {
 
       //社團頁
       //<ClubPage />
-      //<ClubCalendarPage />
+      <ClubCalendarPage />
       //<PostsPage />
       //<ActivitiesPage />
       //<AddPostPage />

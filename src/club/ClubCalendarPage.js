@@ -167,7 +167,8 @@ const styles = StyleSheet.create({
     height:70,
     flexDirection:'row',
     alignItems: 'center',
-    justifyContent:'space-between'
+    justifyContent:'space-between',
+    marginHorizontal: 12,
 
   },
   allMonthText:{
@@ -270,8 +271,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   posters:{
-    height:175,
-    width:100,
+    height:150,
+    width:80,
     shadowOffset:{ width: 2, height: 2, },
     shadowColor:'#000000',
     shadowRadius: 10,
