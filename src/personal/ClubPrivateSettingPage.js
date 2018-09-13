@@ -95,13 +95,13 @@ const styles = StyleSheet.create({
     botton: {
         height: 100,
         width: 140,
-        backgroundColor: 'rgba(246,180,86,0.2)',
+        backgroundColor: 'rgba(246,180,86,0.4)',
         borderRadius: 15,
         margin: 13,
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
-        marginBottom: 110
+        marginBottom: 100
     },
     bottonText: {
         color: 'rgba(102,102,102,1)',

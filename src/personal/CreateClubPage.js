@@ -19,7 +19,7 @@ export default class App extends Component {
             <View style={styles.container}>
 
                 <StatusBar
-                    backgroundColor="blue"
+                    backgroundColor='#f6b456'
                     barStyle="light-content"
                 />
                 <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
         width: 220,
         height: 45,
         color: 'rgba(102,102,102,1)',
-        backgroundColor: 'rgba(246,180,86,0.2)',
+        backgroundColor: 'rgba(246,180,86,0.4)',
         borderRadius: 10,
         textAlign: 'center'
     },

@@ -16,17 +16,17 @@ import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 export default class App extends Component {
     state = { //預設state值(第一次)
         list: [
-            { name: '熱舞社'},
+            { name: '熱舞社' },
             { name: '跆拳道社' },
             { name: '吉他社' },
             { name: '紫藤花親善社' },
             { name: '國樂社' },
-            { name: '熱舞社'},
+            { name: '熱舞社' },
             { name: '跆拳道社' },
             { name: '吉他社' },
             { name: '紫藤花親善社' },
             { name: '國樂社' },
-            { name: '熱舞社'},
+            { name: '熱舞社' },
             { name: '跆拳道社' },
             { name: '吉他社' },
             { name: '紫藤花親善社' },
@@ -102,7 +102,8 @@ const styles = StyleSheet.create({
     },
     leftIcon: {
         height: 30,
-        width: 30
+        width: 30,
+        marginLeft: 10
     },
     headText: {
         color: '#666666',
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     empty: {
-        width: 30
+        width: 40
     },
     topButtonView: {
         width: 380,
@@ -149,11 +150,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        borderBottomWidth: 2,
+        borderBottomWidth: 1,
         borderColor: 'rgba(102,102,102,0.1)',
         backgroundColor: 'rgba(246,180,86,0)',
         width: 370,
-        height:60
+        height: 50
     },
     textArea: {
         flexDirection: 'row',
@@ -161,18 +162,19 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     school: {
-        fontSize: 18,
-        marginLeft: 10,
+        fontSize: 15,
+        marginLeft:15,
         marginRight: 20,
         color: 'rgba(102,102,102,1)'
     },
     club: {
-        fontSize: 22,
+        fontSize: 20,
         color: 'rgba(102,102,102,1)'
     },
-    cancelIcon:{
-        width:22,
-        height:22
+    cancelIcon: {
+        width: 22,
+        height: 22,
+        marginRight: 15
     },
     tabBar: {
         height: 50,

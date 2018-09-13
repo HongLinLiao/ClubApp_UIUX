@@ -6,7 +6,8 @@ import {
   KeyboardAvoidingView,
   TextInput,
   TouchableOpacity,
-  ImageBackground
+  ImageBackground,
+  StatusBar
 } from 'react-native';
 import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
@@ -19,16 +20,16 @@ export default class Form extends Component {
         source={require('../../img/myboyfriend.jpg')}
         imageStyle={{ resizeMode: 'cover' }}
       >
-        <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
+        <StatusBarPaddingIOS style={{ backgroundColor: 'transparent' }} />
         <StatusBar hidden={false} height={50}
-          backgroundColor={'#f6b456'} />
+          backgroundColor={'transparent'} />
         <View style={styles.container}>
 
           <Text style={styles.title}>註 冊</Text>
           <Text style={styles.Q}>暱稱</Text>
           <TextInput
             placeholder='想要別人如何稱呼你/妳?'
-            placeholderTextColor='rgba(255,255,255,0.5)'
+            placeholderTextColor='rgba(255,255,255,0.7)'
             style={styles.textInput}
             underlineColorAndroid={'transparent'} />
           <Text style={styles.Q}>信箱</Text>

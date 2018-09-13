@@ -137,7 +137,8 @@ const styles = StyleSheet.create({
     },
     leftIcon: {
         height: 30,
-        width: 30
+        width: 30,
+        marginLeft:10
     },
     headText: {
         color: '#666666',
@@ -145,7 +146,7 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     empty: {
-        width: 30
+        width: 40
     },
     person: {
         marginTop: 50,
@@ -218,7 +219,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     save: {
-        marginBottom: 30,
+        marginBottom: 35,
         width: 80,
         height: 30,
         borderRadius: 12,

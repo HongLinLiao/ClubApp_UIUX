@@ -7,7 +7,8 @@ import {
   TextInput,
   TouchableOpacity,
   ImageBackground,
-  Image
+  Image,
+  StatusBar
 } from 'react-native';
 import { CheckBox } from 'react-native-elements';
 import { Constants } from 'expo';
@@ -24,9 +25,9 @@ export default class Form extends Component {
         source={require('../../img/myboyfriend.jpg')}
         imageStyle={{ resizeMode: 'cover' }}
       >
-        <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
+        <StatusBarPaddingIOS style={{ backgroundColor: 'transparent' }} />
         <StatusBar hidden={false} height={50}
-          backgroundColor={'#f6b456'} />
+          backgroundColor={'transparent'} />
         <View style={{ flex: 1 }}>
           <View style={styles.container}>
             <View style={styles.logo}></View>

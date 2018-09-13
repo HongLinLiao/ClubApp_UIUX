@@ -18,9 +18,9 @@ export default class Form extends Component {
                 style={styles.bf}
                 source={require('../../img/myboyfriend.jpg')}
                 imageStyle={{ resizeMode: 'cover' }}>
-                <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
+                <StatusBarPaddingIOS style={{ backgroundColor: 'transparent' }} />
                 <StatusBar hidden={false} height={50}
-                    backgroundColor={'#f6b456'} />
+                    backgroundColor={'transparent'} />
                 <View style={styles.container}>
                     <Text style={styles.title}>為你自己拍張照</Text>
                     <Image source={require('../../img/user.png')}

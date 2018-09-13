@@ -107,7 +107,8 @@ const styles = StyleSheet.create({
     },
     leftIcon: {
         height: 30,
-        width: 30
+        width: 30,
+        marginLeft:10
     },
     headText: {
         color: '#666666',
@@ -115,17 +116,17 @@ const styles = StyleSheet.create({
         alignSelf: 'center'
     },
     empty: {
-        width: 30
+        width: 40
     },
     listView: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        borderBottomWidth: 2,
+        borderBottomWidth: 1,
         borderColor: 'rgba(102,102,102,0.1)',
         backgroundColor: 'rgba(246,180,86,0)',
         width: 370,
-        height:60
+        height:50
     },
     textArea:{
         flexDirection: 'row',
@@ -133,12 +134,14 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     school: {
-        fontSize: 18,
+        fontSize: 15,
         marginLeft: 10,
-        marginRight: 20
+        marginRight: 15,
+        color: 'rgba(102,102,102,1)'
     },
     club: {
-        fontSize: 22
+        fontSize: 20,
+        color: 'rgba(102,102,102,1)'
     },
     checkContainer: {
         backgroundColor: 'rgba(255,255,255,0)',

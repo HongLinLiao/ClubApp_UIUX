@@ -3,9 +3,9 @@ import {
   Text,
   View,
   StyleSheet,
-  KeyboardAvoidingView,
   TouchableOpacity,
-  ImageBackground
+  ImageBackground,
+  StatusBar
 } from 'react-native';
 import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
@@ -18,9 +18,9 @@ export default class Form extends Component {
         source={require('../../img/myboyfriend.jpg')}
         imageStyle={{ resizeMode: 'cover' }}
       >
-        <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
+        <StatusBarPaddingIOS style={{ backgroundColor: 'transparent' }} />
         <StatusBar hidden={false} height={50}
-          backgroundColor={'#f6b456'} />
+          backgroundColor={'transparent'} />
         <View style={styles.container}>
           <Text style={styles.title}>信箱驗證</Text>
           <Text style={styles.send}>已寄驗證信至</Text>
@@ -34,8 +34,6 @@ export default class Form extends Component {
           <TouchableOpacity>
             <Text style={styles.backText}>返回</Text>
           </TouchableOpacity>
-          <KeyboardAvoidingView behavior='padding'>
-          </KeyboardAvoidingView>
         </View>
       </ImageBackground>
     );

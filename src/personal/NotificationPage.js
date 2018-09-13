@@ -44,7 +44,7 @@ export default class App extends Component {
             <View style={styles.container}>
                 <StatusBarPaddingIOS style={{ backgroundColor: '#f6b456' }} />
                 <StatusBar
-                    backgroundColor="blue"
+                    backgroundColor='#f6b456'
                     barStyle="light-content"
                 />
                 <View style={styles.headView}>
@@ -94,6 +94,7 @@ export default class App extends Component {
                         renderItem={({ item, index }) => (
                             <View style={styles.listView}>
                                 <View style={styles.textArea}>
+                                    <View style={styles.empty}></View>
                                     <Text style={styles.school}>長庚大學</Text>
                                     <Text style={styles.club}>{item.name}</Text>
                                 </View>
@@ -150,11 +151,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        borderBottomWidth: 2,
+        borderBottomWidth: 1,
         borderColor: 'rgba(102,102,102,0.1)',
         backgroundColor: 'rgba(246,180,86,0)',
         width: 370,
-        height: 60
+        height: 50
     },
     textArea: {
         flexDirection: 'row',
@@ -162,13 +163,13 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     alarm: {
-        width: 25,
-        height: 25,
-        marginRight:15,
+        width: 22,
+        height: 22,
+        marginRight:12,
         marginLeft:15
     },
     alarmText: {
-        fontSize: 22,
+        fontSize: 20,
         fontWeight: 'bold',
         color: 'rgba(102,102,102,1)'
     },
@@ -176,27 +177,27 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-between',
-        borderBottomWidth: 2,
+        borderBottomWidth: 1,
         borderColor: 'rgba(102,102,102,0.5)',
         backgroundColor: 'rgba(246,180,86,0)',
         width: 370,
-        height: 60
+        height: 50
     },
     moonText: {
-        fontSize: 22,
+        fontSize: 20,
         color: 'rgba(102,102,102,1)'
     },
     switchSize:{
         marginRight:15
     },
     school: {
-        fontSize: 18,
+        fontSize: 15,
         marginLeft: 10,
-        marginRight: 20,
+        marginRight: 15,
         color: 'rgba(102,102,102,1)'
     },
     club: {
-        fontSize: 22,
+        fontSize: 20,
         color: 'rgba(102,102,102,1)'
     },
     tabBar: {
