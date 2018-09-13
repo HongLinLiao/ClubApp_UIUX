@@ -19,7 +19,8 @@ export default class App extends Component {
 
         <View style={styles.searchView}>
           <Text style={styles.searchText}>搜尋 (ex:長庚大學)</Text>
-
+          <Image source={require('../../img/search.png')}
+          style={styles.search}/>
         </View>
         
 
@@ -28,6 +29,8 @@ export default class App extends Component {
             <ImageBackground source={require('../../img/clubBack.jpg')} 
             style={styles.clubBackground}>
               <View style={styles.placeView}>
+              <Image source={require('../../img/placeGray.png')}
+          style={styles.place}/>
               <Text style={styles.placeText}>桃園市龜山區</Text>
               </View>
             </ImageBackground>
@@ -44,6 +47,8 @@ export default class App extends Component {
             <ImageBackground source={require('../../img/clubBack.jpg')} 
             style={styles.clubBackground}>
               <View style={styles.placeView}>
+              <Image source={require('../../img/placeGray.png')}
+          style={styles.place}/>
               <Text style={styles.placeText}>桃園市龜山區</Text>
               </View>
             </ImageBackground>
@@ -79,20 +84,26 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
   },
+  search:{
+    height:18,
+    width:18,
+    marginRight:10
+  },
   searchView:{
-    height:30,
-    
+    height:35,
+    flexDirection:'row',
     borderWidth:1,
     borderColor:'rgba(102,102,102,0.2)',
-    justifyContent:'center',
+    justifyContent:'space-between',
+    alignItems:'center',
     marginTop:10,
     marginLeft: 10,
     marginRight: 10,
   },
   searchText:{
-    fontSize:20,
+    fontSize:18,
     color:'rgba(102,102,102,0.5)',
-    paddingHorizontal:10,
+    paddingLeft:10,
   },
   card:{
     flex:1,
@@ -113,16 +124,24 @@ const styles = StyleSheet.create({
     
   },
   placeView:{
+    flexDirection:'row',
     backgroundColor:'rgba(0,0,0,0.7)',
     paddingHorizontal: 10,
     paddingVertical: 5,
     margin:10,
-    borderRadius:30
+    borderRadius:30,
+    justifyContent:'center',
+    alignItems:'center',
   },
   placeText:{
-    color:'#ffffff',
-    fontSize:15,
+    color: '#f0f0f0',
+    fontSize:12,
     
+  },
+  place:{
+    height:12,
+    width:12,
+    marginRight:10
   },
   clubNameView:{
     flex:1,

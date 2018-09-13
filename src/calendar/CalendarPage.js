@@ -96,11 +96,12 @@ export default class App extends Component {
                 <View style={styles.oneDateView}><Text style={styles.dateText}></Text></View>
                 </View>
 
-                <Text style={{color:'#d0d0d0'}}
-                    >____________________________________________________________</Text>
+              
 
 
               </View>
+              </View>
+
             <ScrollView horizontal={true}>
             <View style={styles.activityPoster}>
               <TouchableOpacity style={styles.posters}>
@@ -121,7 +122,7 @@ export default class App extends Component {
               </TouchableOpacity>
             </View>
             </ScrollView>
-            </View>
+            
           
 
 
@@ -142,10 +143,18 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:'center',
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(102,102,102,0.3)',
+    paddingBottom: 15,
+    marginHorizontal:22
   },
   arrow:{
     height:30,
     width:30,
+   
+},
+arrowView:{
+  marginHorizontal:13,
 },
   selectMonth:{
     height:70,

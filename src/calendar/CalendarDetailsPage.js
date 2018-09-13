@@ -8,7 +8,7 @@ import { Button ,SearchBar,Icon,CheckBox} from 'react-native-elements';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 
 //其實這一頁是行事曆的篩選
-
+//好像不需要這一頁了
 export default class App extends Component {
     render() {
       return (
