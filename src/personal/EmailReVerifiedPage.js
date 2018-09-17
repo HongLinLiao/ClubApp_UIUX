@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
     },
     fake: {
         width: 30,
+        marginRight:10,
     },
     containView: {
         flex: 1,

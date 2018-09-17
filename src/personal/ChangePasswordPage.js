@@ -75,9 +75,11 @@ const styles = StyleSheet.create({
     arrow: {
         height: 30,
         width: 30,
+        marginLeft: 10,
     },
     fake: {
         width: 30,
+        marginRight: 10,
     },
     containView: {
         flex: 1,

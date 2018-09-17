@@ -126,9 +126,15 @@ export default class App extends Component {
           
 
 
-        <View style={styles.tabBar}>
+        <View style={styles.tabBar}></View>
         
+        
+        <TouchableOpacity style={styles.selecting}>
+        <View style={styles.selectingButtonView}>
+            <Image source={require('../../img/star.png')}
+                style={styles.selectingImage} />
         </View>
+    </TouchableOpacity>
 
       </View>
     );
@@ -277,4 +283,29 @@ arrowView:{
     height:50,
     backgroundColor:'#f6b456'
   },
+  selecting: {
+    position: 'absolute',
+    top: 500, //與最上端的距離
+    right: 30, //與右邊的距離
+
+},
+selectingButtonView: {
+    width: 60,
+    height: 60,
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 10,
+    borderRadius: 100,
+    backgroundColor: '#f6b456',
+    shadowOffset: { width: 1, height: 1, },
+    shadowColor: '#000000',
+    shadowRadius: 10,
+    shadowOpacity: 0.7,
+    elevation: 10,
+},
+
+selectingImage: {
+    width: 40,
+    height: 40,
+},
 });

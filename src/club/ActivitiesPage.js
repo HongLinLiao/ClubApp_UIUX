@@ -24,16 +24,16 @@ export default class App extends React.Component {
             </TouchableOpacity>
           </View>
           <Text style={styles.headText}>社遊</Text>
-          <View style={styles.arrow}/>
+          <View style={styles.fake} />
 
 
         </View>
 
         <ScrollView>
-        <View  style={styles.clubBackground} >
-          <ImageBackground source={require('../../img/clubAct.jpg')}
-            style={styles.clubBackground} />
-        </View>
+          <View style={styles.clubBackground} >
+            <ImageBackground source={require('../../img/clubAct.jpg')}
+              style={styles.clubBackground} />
+          </View>
 
           <View style={styles.clubTextView}>
             <Text style={styles.clubText}>長庚大學</Text>
@@ -116,17 +116,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row'
   },
-  headText:{
-    fontSize:20,
-    color:'#666666'
+  headText: {
+    fontSize: 20,
+    color: '#666666'
   },
   arrow: {
     height: 30,
     width: 30,
+    marginLeft: 10,
+  },
+  fake: {
+    width: 30,
+    marginRight: 10,
   },
   clubBackground: {
     height: 250,
-   // justifyContent: 'flex-end',
+    // justifyContent: 'flex-end',
   },
   clubTextView: {
     flexDirection: 'row'
@@ -185,7 +190,7 @@ const styles = StyleSheet.create({
     marginRight: 30,
   },
   map: {
-    flex:1,
+    flex: 1,
   },
   titleContentText: {
     fontSize: 17,
