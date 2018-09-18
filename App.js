@@ -13,8 +13,8 @@ import SendEamilResultPage from './src/login/SendEamilResultPage'
 
 //首頁
 import HomePage from './src/home/HomePage.js'
-import ActivitesPage from './src/home/HomeActivitiesActivitesPage'
-import SelectingPage from './src/home/SelectingPage'
+import HomeActivtiesPage from './src/home/HomeActivtiesPage'
+import SelectTypePage from './src/home/SelectingPage'
 
 //搜尋頁
 import SearchPage from './src/search/SearchPage'
@@ -23,9 +23,11 @@ import CalendarDetailsPage from './src/calendar/CalendarDetailsPage'
 //社團頁
 import ClubPage from './src/club/ClubPage.js'
 import ClubCalendarPage from './src/club/ClubCalendarPage.js'
-import ClubStoriesPage from './src/club/ClubStoriesPage.js'
 import PostsPage from './src/club/PostsPage.js'
-import ActiviesPage from './src/club/ActiviesPage.js'
+import ActivitiesPage from './src/club/ActivitiesPage'
+import AddPostPage from './src/club/AddPostPage'
+import AddActivityPage from './src/club/AddActivityPage'
+import ClubAdminPage from './src/club/ClubAdminPage'
 
 //行事曆頁
 import CalendarPage from './src/calendar/CalendarPage.js'
@@ -41,62 +43,67 @@ import NotificationPage from './src/personal/NotificationPage'
 import ProfilePage from './src/personal/ProfilePage'
 import ProfileSettingPage from './src/personal/ProfileSettingPage'
 import SendEmailSuccessfulPage from './src/personal/SendEmailSuccessfulPage'
+import CreateClubPage from './src/personal/CreateClubPage'
+import ClubPrivateSettingPage from './src/personal/ClubPrivateSettingPage'
 
 
 
 
 
 export default class App extends React.Component {
-  render() {
-    return (
-      //登入頁
-      //<EmailVerifyPage />
-      //<ForgotPasswordPage />
-      //<LoginPage />
-      //<NickNamePage />
-      //<RegisteredPage />
-      //<PhotoPage />
-      //<SendEamilResultPage />
+      render() {
+            return (
+                  //登入頁
+                  //<EmailVerifyPage />
+                  //<ForgotPasswordPage />
+                  //<LoginPage />
+                  //<NickNamePage />
+                  //<RegisteredPage />
+                  //<PhotoPage />
+                  //<SendEamilResultPage />
 
-      //首頁
-      //<HomePage />
-      //<ActivitesPage />
-      //<SelectingPage />
+                  //首頁
+                  //<HomePage />
+                  //<HomeActivtiesPage />
+                  //<SelectTypePage />
 
-      //搜尋頁
-      //<SearchPage />
+                  //搜尋頁
+                  //<SearchPage />
 
-      //社團頁
-      //<ClubPage />
-      //<ClubCalendarPage />
-      //<ClubStoriesPage />
-      //<PostsPage />
-      //<ActiviesPage />
+                  //社團頁
+                  //<ClubPage />
+                  //<ClubCalendarPage />
+                  <PostsPage />
+                  //<ActivitiesPage />
+                  //<AddPostPage />
+                  //<AddActivityPage />
+                  //<ClubAdminPage />
 
-      //行事曆頁
-      //<CalendarPage />
-      //<CalendarDetailsPage />
+                  //行事曆頁
+                  //<CalendarPage />
+                  //<CalendarDetailsPage />
 
-      //個人設定頁
-      //<AdvancedSettingPage />
-      //<ChangeEamilPage />
-      //<ChangePasswordPage />
-      //<EmailReVerifiedPage />
-      //<FavoriteClubPage />
-      // <JoinedClubPage />
-      <NotificationPage />
-      //<ProfilePage />
-      //<ProfileSettingPage />
-      //<SendEmailSuccessfulPage />
+                  //個人設定頁
+                  //<AdvancedSettingPage />
+                  //<ChangeEamilPage />
+                  //<ChangePasswordPage />
+                  //<EmailReVerifiedPage />
+                  //<FavoriteClubPage />
+                  //<JoinedClubPage />
+                  //<NotificationPage />
+                  //<ProfilePage />
+                  //<ProfileSettingPage />
+                  //<SendEmailSuccessfulPage />
+                  //<ClubPrivateSettingPage />
     );
-  }
+      }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+      container: {
+            flex: 1,
+            backgroundColor: '#fff',
+            alignItems: 'center',
+            justifyContent: 'center',
+      },
 });

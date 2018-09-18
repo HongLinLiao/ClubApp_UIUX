@@ -8,13 +8,69 @@ import {
     Image,
     TextInput,
     KeyboardAvoidingView,
-    ScrollView
+    ScrollView,
+    FlatList,
+    Keyboard
 } from 'react-native';
 import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 
 
 export default class App extends Component {
+
+    state = { //想要預設state就可以這樣宣告一個state把你想要的值放進去
+        list: [
+            {
+                memberName: 'Shownu 女友',
+                headImg: require('../../img/myboyfriend.jpg'),
+                schoolName: '長庚大學',
+                clubName: 'Monbebe社',
+                memberJob: '社員',
+                memberCommemt: '66666666666666666666666666666666666666666666666666666666666666666666666666666666666',
+                likeOrNo: false,
+                likeImg: require('../../img/like.png')
+
+            },
+            {
+                memberName: 'Shownu 側福晉',
+                headImg: require('../../img/handsomeShownu.jpeg'),
+                schoolName: '長庚大學',
+                clubName: 'Monbebe社',
+                memberJob: '美宣',
+                memberCommemt: '讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚讚',
+                likeOrNo: false,
+                likeImg: require('../../img/like.png')
+            },
+        ],
+        likeOr: false,
+        likeI: require('../../img/like.png'),
+
+        //紘維新增的~
+        comment: false,
+    }
+
+    changeLikeImg = (index) => {
+        let newList = [...this.state.list]
+        newList[index].likeOrNo = !newList[index].likeOrNo
+        newList[index].likeImg = !newList[index].likeOrNo ? require('../../img/like.png') : require('../../img/graylike.png')
+        console.log(newList)
+        this.setState({
+            list: newList
+        })
+    }
+    changeLikeI = () => {
+        this.setState({
+            likeOr: !this.state.likeOr,
+            likeI: this.state.likeOr ? require('../../img/like.png') : require('../../img/graylike.png')
+        })
+    }
+
+    commemt = (status) => {
+        this.setState({
+            comment: status
+        })
+    }
+
     render() {
         return (
             <View style={styles.container}>
@@ -90,9 +146,9 @@ export default class App extends Component {
 
                     <View style={styles.sbRowLine}>
                         <View style={styles.row}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => { this.changeLikeI() }}>
                                 <Image style={styles.icon}
-                                    source={require('../../img/like.png')} />
+                                    source={this.state.likeI} />
                             </TouchableOpacity>
                             <Text style={styles.number}>520</Text>
                         </View>
@@ -107,88 +163,93 @@ export default class App extends Component {
                     </View>
 
 
-
-                    <View style={styles.rowPadding}>
-                        <TouchableOpacity>
-                            <Image style={styles.littleHead}
-                                source={require('../../img/myboyfriend.jpg')} />
-                        </TouchableOpacity>
-                        <View style={styles.columnLine}>
-                            <View style={styles.sbRow}>
-                                <View style={styles.row}>
-                                    <Text style={styles.littleSchool}>長庚大學</Text>
-                                    <Text style={styles.littleClub}>Monbebe社</Text>
-                                </View>
-                                <View style={styles.row}>
-                                    <TouchableOpacity>
-                                        <Image style={styles.icon}
-                                            source={require('../../img/like.png')} />
-                                    </TouchableOpacity>
-                                    <Text style={styles.numberLittle}>520</Text>
-                                    <TouchableOpacity>
-                                        <Image source={require('../../img/pencil.png')}
-                                            style={styles.icon} />
-                                    </TouchableOpacity>
-                                </View>
-                            </View>
-                            <View style={styles.row}>
-                                <Text style={styles.littleName}>shownu女友</Text>
-                                <Text style={styles.littleJob}>社員</Text>
-                            </View>
-                            <Text style={styles.comment}>
-                                6666666666666666666666666666666666666666666666666666
-                            </Text>
-                        </View>
-                    </View>
-                    <View style={styles.rowPadding}>
-                        <TouchableOpacity>
-                            <Image style={styles.littleHead}
-                                source={require('../../img/myboyfriend.jpg')} />
-                        </TouchableOpacity>
-                        <View style={styles.columnLine}>
-                            <View style={styles.sbRow}>
-                                <View style={styles.row}>
-                                    <Text style={styles.littleSchool}>長庚大學</Text>
-                                    <Text style={styles.littleClub}>Monbebe社</Text>
-                                </View>
-                                <View style={styles.row}>
-                                    <TouchableOpacity>
-                                        <Image style={styles.icon}
-                                            source={require('../../img/like.png')} />
-                                    </TouchableOpacity>
-                                    <Text style={styles.numberLittle}>520</Text>
-                                    <TouchableOpacity>
-                                        <Image source={require('../../img/pencil.png')}
-                                            style={styles.icon} />
-                                    </TouchableOpacity>
+                    <FlatList
+                        data={this.state.list}
+                        renderItem={({ item, index }) => (
+                            <View style={styles.rowPadding}>
+                                <TouchableOpacity>
+                                    <Image style={styles.littleHead}
+                                        source={item.headImg} />
+                                </TouchableOpacity>
+                                <View style={styles.columnLine}>
+                                    <View style={styles.sbRow}>
+                                        <View style={styles.row}>
+                                            <Text style={styles.littleSchool}>{item.schoolName}</Text>
+                                            <Text style={styles.littleClub}>{item.clubName}</Text>
+                                        </View>
+                                        <View style={[styles.row]}>
+                                            <TouchableOpacity onPress={() => { this.changeLikeImg(index) }}>
+                                                <Image style={styles.icon}
+                                                    source={item.likeImg} />
+                                            </TouchableOpacity>
+                                            <Text style={styles.numberLittle}>520</Text>
+                                            <TouchableOpacity>
+                                                <Image source={require('../../img/pencil.png')}
+                                                    style={styles.icon} />
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View>
+                                    <View style={styles.row}>
+                                        <Text style={styles.littleName}>{item.memberName}</Text>
+                                        <Text style={styles.littleJob}>{item.memberJob}</Text>
+                                    </View>
+                                    <Text style={styles.comment}>{item.memberCommemt}</Text>
                                 </View>
                             </View>
-                            <View style={styles.row}>
-                                <Text style={styles.littleName}>shownu女友</Text>
-                                <Text style={styles.littleJob}>社員</Text>
-                            </View>
-                            <Text style={styles.comment}>
-                                6666666666666666666666666666666666666666666666666666
-                            </Text>
-                        </View>
-                    </View>
+                        )}
+                        keyExtractor={(item, index) => item.memberName}
+                    />
 
                 </ScrollView>
 
-                <View style={styles.tabBar}>
-                    <Image style={styles.littleHead}
-                        source={require('../../img/myboyfriend.jpg')} />
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.textInput}
-                            placeholder='新增留言...'
-                            placeholderTextColor='rgba(102,102,102,0.7)'
-                            underlineColorAndroid={'transparent'} />
-                    </View>
+                <View style={[styles.rowPaddingInput, {height: this.state.comment ? null : 55} ]}>
                     <TouchableOpacity>
-                        <Image source={require('../../img/send.png')}
-                            style={styles.sendIcon} />
+                        <Image style={styles.littleHead}
+                            source={require('../../img/myboyfriend.jpg')} />
                     </TouchableOpacity>
+                    <View style={styles.columnTabBar}>
+                        {this.state.comment ? (
+                            <View>
+                                <View style={styles.row}>
+                                    <Text style={styles.littleSchool}>長庚大學</Text>
+                                    <Text style={styles.littleClub}>Monbebe社</Text>
+                                </View>
+                                <View style={styles.row}>
+                                    <Text style={styles.littleName}>Shownu女友</Text>
+                                    <Text style={styles.littleJob}>社員</Text>
+                                </View>
+                            </View>
+                        ) : null
+                        }
+                        <View style={[ styles.inputViewTabBar]}>
+                            <TextInput
+                                style={[ styles.textInputTabBar ]}
+                                placeholder='新增留言...'
+                                placeholderTextColor='rgba(102,102,102,0.7)'
+                                underlineColorAndroid={'transparent'}
+                                multiline={this.state.comment}
+                                onFocus={() => this.commemt(true)}
+                                onEndEditing={() => this.commemt(false)}
+                            />
+                        </View>
+                    </View>
+                    <View style={styles.sbColumn}>
+                        {this.state.comment ?
+                            (
+                                <TouchableOpacity onPress={() => {
+                                    this.setState({comment: false})
+                                    Keyboard.dismiss()
+                                }}>
+                                    <Image style={styles.iconClose}
+                                        source={require('../../img/close.png')} />
+                                </TouchableOpacity>
+                            ) : null             
+                        }            
+                        <TouchableOpacity>
+                            <Image source={require('../../img/send.png')}
+                                style={styles.sendIcon} />
+                        </TouchableOpacity>
+                    </View>
                 </View>
                 <KeyboardAvoidingView behavior='padding'></KeyboardAvoidingView>
             </View>
@@ -230,7 +291,7 @@ const styles = StyleSheet.create({
     },
     row: {
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     rowLeft: {
         flexDirection: 'row',
@@ -317,7 +378,8 @@ const styles = StyleSheet.create({
     sbRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
+        width: '100%',
     },
     icon: {
         height: 20,
@@ -331,8 +393,7 @@ const styles = StyleSheet.create({
     },
     rowPadding: {
         flexDirection: 'row',
-        margin: 5,
-        //backgroundColor: 'rgba(246,180,86,0.3)'
+        margin: 5
     },
     littleHead: {
         height: 40,
@@ -346,9 +407,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         borderBottomWidth: 0.5,
         borderColor: 'rgba(102,102,102,0.2)',
-        //width: 330,
-        padding: 5,
-        //backgroundColor: 'rgba(246,180,86,0.3)'
+        flex: 1,
+        padding: 5
     },
     littleSchool: {
         color: '#666666',
@@ -357,7 +417,7 @@ const styles = StyleSheet.create({
     },
     littleClub: {
         color: '#666666',
-        fontSize: 19
+        fontSize: 18
     },
     numberLittle: {
         color: '#666666',
@@ -383,29 +443,72 @@ const styles = StyleSheet.create({
     tabBar: {
         height: 50,
         backgroundColor: 'rgba(246,180,86,1)',
-        alignSelf: 'stretch',
-        flexDirection: 'row',
+        alignSelf: 'stretch'
+    },
+    tabBarView: {
         alignItems: 'center',
+        flexDirection: 'row',
+        justifyContent: 'space-between',
         paddingLeft: 5,
-        paddingRight: 5
+        paddingRight: 10,
+        flex: 1
     },
     inputView: {
         height: 35,
-        width: 300,
         backgroundColor: 'rgba(255,255,255,0.4)',
         borderRadius: 15,
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginLeft: 5,
-        marginRight: 5
+        padding:8
     },
     textInput: {
         height: 35,
-        width: 280
+        alignSelf: 'stretch'
     },
     sendIcon: {
         height: 22,
         width: 22,
-        margin: 5
+        marginRight: 5,
+        marginLeft:5,
+        marginTop:8
+    },
+    rowPaddingInput: {
+        flexDirection: 'row',
+        alignSelf: 'stretch',
+        backgroundColor: 'rgba(246,180,86,1)',
+        justifyContent: 'space-between'
+    },
+    columnTabBar: {
+        flexDirection: 'column',
+        flex: 1,
+        padding: 5
+    },
+    inputViewTabBar: {
+        backgroundColor: 'rgba(255,255,255,0.3)',
+        borderRadius: 15,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop:7,
+        marginBottom:7,
+        paddingLeft: 10,
+        paddingRight: 10
+    },
+    textInputTabBar: {
+        alignSelf: 'stretch',
+        color:'#666666'
+    },
+    sbColumn: {
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingTop: 8,
+        paddingBottom: 8,
+        paddingRight: 5,
+    },
+    iconClose: {
+        height: 13,
+        width: 13,
+        marginTop:8
     }
 })

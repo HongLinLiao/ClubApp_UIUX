@@ -75,6 +75,7 @@ export default class Form extends Component {
                         placeholder='EJ boyfriend'
                         placeholderTextColor='rgba(102,102,102,0.5)'
                         underlineColorAndroid={'rgba(246,180,86,0)'}
+                        multiline={true}
                         editable={this.state.nameEditable} 
                         onChangeText={(name) => this.setState({name})}
                         value={this.state.name}/>
@@ -95,6 +96,7 @@ export default class Form extends Component {
                     <View style={styles.empty}></View>
                     <TextInput style={[styles.aboutMeInput, {color: this.state.aboutColor}]}  //state變數代表自介顏色
                         placeholder='EJ boyfriend'
+                        multiline={true}
                         placeholderTextColor='rgba(102,102,102,0.5)'
                         underlineColorAndroid={'rgba(246,180,86,0)'}
                         editable={this.state.aboutEditable}
