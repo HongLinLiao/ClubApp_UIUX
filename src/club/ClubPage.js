@@ -68,7 +68,10 @@ export default class App extends React.Component {
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.adminButton}>
-                <View style={styles.adminIcon} />
+                <View style={styles.adminIcon} >
+                <Image source={require('../../img/changeMember.png')}
+                style={styles.adminIcon} />
+                </View>
                 <Text style={styles.adminText}>編輯成員</Text>
               </View>
             </TouchableOpacity>
@@ -233,7 +236,7 @@ export default class App extends React.Component {
         <ModalDropdown
           defaultValue='選擇其他社團 ▼'
           style={styles.modal}
-          testStyle={styles.modalText}
+          textStyle={styles.modalText}
           dropdownStyle={styles.modalDown}
           dropdownTextStyle={styles.modalDownText}
           options={['長庚大學 紫藤花親善社', '長庚大學 有氧舞蹈社', '長庚大學 熱舞社']} />
@@ -262,13 +265,16 @@ const styles = StyleSheet.create({
 
   },
   modalText: {
-    //跑不出效果
+    fontSize:16
   },
   modalDown: {
     width: 250,
+    borderRadius:20,
+    backgroundColor:'rgba(255,255,255,0.95)'
   },
   modalDownText: {
-    fontSize: 20
+    fontSize: 20,
+    backgroundColor:'rgba(255,255,255,0.1)'
   },
   clubBackground: {
     height: 380,
@@ -312,18 +318,19 @@ const styles = StyleSheet.create({
   },
   clubRightTextView: {
     flexDirection: 'column',
-
     alignItems: 'flex-end',
-    paddingLeft: 20,
-    paddingRight: 5,
+    paddingLeft: 40,
+    paddingRight: 8,
+    
   },
   calanderButton: {
     height: 50,
     width: 50,
     borderRadius: 100,
-    backgroundColor: 'rgb(255, 157, 0)',
+    backgroundColor: '#f6b456',
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   iconCalendar: {
     height: 35,

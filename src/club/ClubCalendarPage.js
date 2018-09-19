@@ -18,22 +18,22 @@ export default class App extends Component {
           <Text style={styles.schoolText}>長庚大學</Text>
         </View>
         <View style={styles.selectMonth}>
-          <View style={styles.arrowView}>
+          
             <TouchableOpacity>
-              <Image source={require('../../img/arrowLeft.png')}
+              <Image source={require('../../img/arrowLeftBlue.png')}
                 style={styles.arrow} />
             </TouchableOpacity>
-          </View>
+          
           <View style={styles.allMonthText}>
             <Text style={styles.monthText}>August</Text>
             <Text style={styles.yearText}>2018</Text>
           </View>
-          <View style={styles.arrowView}>
+        
             <TouchableOpacity>
-              <Image source={require('../../img/arrowRight.png')}
+              <Image source={require('../../img/arrowRightBlue.png')}
                 style={styles.arrow} />
             </TouchableOpacity>
-          </View>
+          
         </View>
 
         <View style={styles.calendar}>
@@ -161,10 +161,7 @@ const styles = StyleSheet.create({
   schoolText: {
     color: '#666666'
   },
-  arrow: {
-    height: 30,
-    width: 30,
-  },
+  
   selectMonth: {
     height: 70,
     flexDirection: 'row',
@@ -193,6 +190,7 @@ const styles = StyleSheet.create({
   arrow: {
     width: 40,
     height: 40,
+    marginHorizontal:10
   },
   dayView: {
     alignItems: 'center',

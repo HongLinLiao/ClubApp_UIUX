@@ -15,22 +15,22 @@ export default class App extends Component {
                 <StatusBar backgroundColor='#f6b456' />
 
                 <View style={styles.selectMonth}>
-                    <View style={styles.arrowView}>
+                    
                         <TouchableOpacity>
-                            <Image source={require('../../img/arrowLeft.png')}
+                            <Image source={require('../../img/arrowLeftBlue.png')}
                                 style={styles.arrow} />
                         </TouchableOpacity>
-                    </View>
+                   
                     <View style={styles.allMonthText}>
                         <Text style={styles.monthText}>August</Text>
                         <Text style={styles.yearText}>2018</Text>
                     </View>
-                    <View style={styles.arrowView}>
+                    
                         <TouchableOpacity>
-                            <Image source={require('../../img/arrowRight.png')}
+                            <Image source={require('../../img/arrowRightBlue.png')}
                                 style={styles.arrow} />
                         </TouchableOpacity>
-                    </View>
+                    
                 </View>
 
                 <View style={styles.calendar}>
@@ -132,7 +132,7 @@ export default class App extends Component {
                 </View>
                 <TouchableOpacity style={styles.selecting}>
                     <View style={styles.selectingButtonView}>
-                        <Image source={require('../../img/star.png')}
+                        <Image source={require('../../img/checked.png')}
                             style={styles.selectingImage} />
                     </View>
                 </TouchableOpacity>
@@ -205,14 +205,8 @@ const styles = StyleSheet.create({
         paddingBottom: 15,
         marginHorizontal: 22
     },
-    arrow: {
-        height: 30,
-        width: 30,
-
-    },
-    arrowView: {
-        marginHorizontal: 13,
-    },
+    
+    
     selectMonth: {
         height: 70,
         flexDirection: 'row',
@@ -239,6 +233,8 @@ const styles = StyleSheet.create({
     arrow: {
         width: 40,
         height: 40,
+    marginHorizontal:10
+
     },
     dayView: {
         alignItems: 'center',
@@ -356,8 +352,8 @@ const styles = StyleSheet.create({
     },
 
     selectingImage: {
-        width: 40,
-        height: 40,
+        width: 35,
+        height: 35,
     },
     blackBackground: {
         position: 'absolute',

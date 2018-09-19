@@ -30,20 +30,18 @@ export default class App extends React.Component {
                 <View style={styles.clubLeftTextView}>
                   <TouchableOpacity style={styles.flexDirectionRow}>
                     <Text style={styles.schoolText}>長庚大學</Text>
-                    <Image source={require('../../img/pencil.png')}
-                      style={styles.iconPancil} />
+                    
                   </TouchableOpacity>
                   <TouchableOpacity style={styles.flexDirectionRow}>
                     <Text style={styles.clubTopNameText}>紫藤花親善社</Text>
-                    <Image source={require('../../img/pencil.png')}
-                      style={styles.iconPancil} />
+                    
                   </TouchableOpacity>
                 </View>
 
                 <View style={styles.clubRightTextView}>
                   <TouchableOpacity style={styles.flexDirectionRow}>
                     <Text style={styles.numberext}>公開</Text>
-                    <Image source={require('../../img/pencil.png')}
+                    <Image source={require('../../img/exchange.png')}
                       style={styles.iconPancil} />
                   </TouchableOpacity>
                   <Text style={styles.numberext}>56位社員,社長</Text>
@@ -83,7 +81,10 @@ export default class App extends React.Component {
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.adminButton}>
-                <View style={styles.adminIcon} /> //插入圖示
+                <View style={styles.adminIcon} >
+                <Image source={require('../../img/changeMember.png')}
+                style={styles.adminIcon} />
+                </View>
                 <Text style={styles.adminText}>編輯成員</Text>
               </View>
             </TouchableOpacity>
@@ -306,7 +307,7 @@ const styles = StyleSheet.create({
     height: 20,
     width: 20,
     marginLeft: 10,
-    borderWidth: 1,
+   
   },
   clubTextView: {
     flexDirection: 'row'
@@ -344,7 +345,7 @@ const styles = StyleSheet.create({
     height: 50,
     width: 50,
     borderRadius: 100,
-    backgroundColor: 'rgb(255, 157, 0)',
+    backgroundColor: '#f6b456',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -389,6 +390,7 @@ const styles = StyleSheet.create({
   clubSummaryText: {
     fontSize: 18,
     color: '#666666',
+    lineHeight:32,
     
   },
   clubActivity: {

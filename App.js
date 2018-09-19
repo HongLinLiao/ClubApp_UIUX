@@ -71,7 +71,7 @@ export default class App extends React.Component {
       // <SearchPage />
 
       //社團頁
-      // <ClubPage />
+       <ClubPage />
       // <ClubCalendarPage />
       // <PostsPage />
       // <ActivitiesPage />
@@ -81,7 +81,7 @@ export default class App extends React.Component {
 
       //行事曆頁
       // <CalendarPage />
-       <CalendarDetailsPage />
+      // <CalendarDetailsPage />
 
       //個人設定頁
       // <AdvancedSettingPage />
