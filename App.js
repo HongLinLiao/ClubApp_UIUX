@@ -73,10 +73,10 @@ export default class App extends React.Component {
                   //社團頁
                   //<ClubPage />
                   //<ClubCalendarPage />
-                  <PostsPage />
+                  //<PostsPage />
                   //<ActivitiesPage />
                   //<AddPostPage />
-                  //<AddActivityPage />
+                  <AddActivityPage />
                   //<ClubAdminPage />
 
                   //行事曆頁

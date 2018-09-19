@@ -8,9 +8,7 @@ import {
     Image,
     TextInput,
     KeyboardAvoidingView,
-    ScrollView,
-    FlatList,
-    Keyboard
+    ScrollView
 } from 'react-native';
 import { Constants } from 'expo';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
@@ -38,22 +36,21 @@ export default class App extends Component {
                             style={styles.rightIcon} />
                     </TouchableOpacity>
                 </View>
-
-                <View style={styles.rowLeft}>
-                    <Image style={styles.bigHead}
-                        source={require('../../img/shownu.jpg')} />
+                <ScrollView style={{ width: '100%' }}>
+                    <View style={styles.rowLeft}>
+                        <Image style={styles.bigHead}
+                            source={require('../../img/shownu.jpg')} />
                         <View style={styles.column}>
                             <View style={styles.row}>
                                 <Text style={styles.school}>長庚大學</Text>
                                 <Text style={styles.club}>Monbebe社</Text>
                             </View>
-                                <View style={styles.row}>
-                                    <Text style={styles.name}>shownu女友</Text>
-                                    <Text style={styles.job}>社員</Text>
-                                </View>
+                            <View style={styles.row}>
+                                <Text style={styles.name}>shownu女友</Text>
+                                <Text style={styles.job}>社員</Text>
+                            </View>
                         </View>
-                </View>
-                <ScrollView style={{ width: '100%' }}>
+                    </View>
                     <TextInput
                         style={styles.bigTextInput}
                         placeholder='標題'
@@ -124,25 +121,21 @@ const styles = StyleSheet.create({
     },
     rowLeft: {
         flexDirection: 'row',
-        alignSelf: 'stretch',
-        height: 80,
-        margin: 10,
-        alignItems:'center'
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        paddingLeft: 20,
+        paddingTop: 20
     },
     bigHead: {
         height: 60,
         width: 60,
         borderRadius: 50,
-        margin: 15
-    },
-    rowsb: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center'
+        marginRight: 15
     },
     column: {
         flexDirection: 'column',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        alignItems: 'flex-start'
     },
     school: {
         color: '#666666',
@@ -152,7 +145,8 @@ const styles = StyleSheet.create({
     club: {
         color: '#666666',
         fontSize: 20,
-        margin: 5
+        margin: 5,
+        fontWeight: 'bold'
     },
     name: {
         color: '#666666',
@@ -175,13 +169,14 @@ const styles = StyleSheet.create({
         marginRight: 20,
         marginLeft: 20,
         marginBottom: 5,
+        marginTop:10,
         color: 'rgba(102,102,102,1)'
     },
     littleTextInput: {
         fontSize: 15,
         alignSelf: 'stretch',
-        marginLeft:20,
-        marginTop:10,
+        marginLeft: 20,
+        marginTop: 10,
         color: 'rgba(102,102,102,0.7)'
     },
     tabBar: {
