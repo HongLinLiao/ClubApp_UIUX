@@ -15,12 +15,12 @@ export default class App extends Component {
                 <View style={styles.headView}>
                     <View style={styles.fake}></View>
                     <Text style={styles.headText}>iclubs</Text>
-                    <View >
+                    
                         <TouchableOpacity>
                             <Image source={require('../../img/control.png')}
                                 style={styles.controlImage} />
                         </TouchableOpacity>
-                    </View>
+                    
                 </View>
 
                 <ScrollView>
@@ -33,16 +33,20 @@ export default class App extends Component {
                             </View>
                             <View style={styles.newsTextView}>
                                 <View style={styles.clubAndManagerNameView}>
+                                <Text style={styles.newsClubText}>長庚大學</Text>
                                     <Text style={styles.newsClubText}>紫藤花親善社</Text>
                                     <Text style={styles.newsManagerText}>社長</Text>
                                     <Text style={styles.newsManagerText}>Ann</Text>
+                                </View>
+                                <View style={styles.schoolNameView}>
+                                    <Text style={styles.newsClubText}>長庚大學</Text>
                                 </View>
                                 <View style={styles.actNameAndDateView}>
                                     <Text style={styles.newsNameText}>期初社大</Text>
                                     <Text style={styles.newsDateText}>2018/09/29</Text>
                                 </View>
                                 <View style={styles.newsContentView}>
-                                    <Text numberOfLines={3} ellipsizeMode='tail' style={styles.newsContentText}>dfghjkldfghjkzxcvbnmxcvdfghdfghjkldfghjkzxcvbnmadfsggdfghdghxcvdfghksndksndsnkdnkjsndk
+                                    <Text numberOfLines={1} ellipsizeMode='tail' style={styles.newsContentText}>nmadfsggdfghdghxcvdfghk
                                     <Text style={styles.moreText}>...more</Text>
                                     </Text>
                                     
@@ -114,7 +118,7 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         borderBottomWidth: 1,
         borderBottomColor: 'rgba(102,102,102,0.25)',
-        height: 160,
+        height: 130,
         flexDirection: 'row',
         marginLeft: 5,
         marginRight: 5,
@@ -128,6 +132,7 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 30,
+        elevation: 10,
     },
 
     managerImageView: {
@@ -142,14 +147,21 @@ const styles = StyleSheet.create({
         marginLeft: 8,
         marginRight:8,
         flexDirection: 'column',
-       
         flex:8,
     },
     clubAndManagerNameView: {
         flex:1,
         flexDirection: 'row',
         alignItems: 'flex-end',
-        marginBottom: 5,
+        marginBottom: 3,
+        //borderWidth:1
+    },
+    schoolNameView: {
+        flex:1,
+        flexDirection: 'row',
+        alignItems: 'flex-end',
+        marginBottom: 3,
+        //borderWidth:1
     },
     newsClubText: {
         color: '#666666',
@@ -161,12 +173,12 @@ const styles = StyleSheet.create({
         fontSize: 10,
     },
     actNameAndDateView: {
-        flex:1,
+        flex:1.6,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 5,
-       
+        alignItems: 'flex-end',
+        marginBottom: 3,
+        //borderWidth:1
     },
     newsNameText: {
         color: '#666666',
@@ -179,7 +191,7 @@ const styles = StyleSheet.create({
     },
 
     newsContentView: {
-        flex:3,
+        flex:1.5,
        
     },
     newsContentText: {

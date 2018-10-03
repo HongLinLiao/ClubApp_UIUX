@@ -63,7 +63,7 @@ export default class App extends React.Component {
       // <SendEamilResultPage />
 
       //首頁
-      // <HomePage />
+       <HomePage />
       // <HomeActivtiesPage />
       // <HomeSelectingPage />
 
@@ -71,7 +71,7 @@ export default class App extends React.Component {
       // <SearchPage />
 
       //社團頁
-       <ClubPage />
+      // <ClubPage />
       // <ClubCalendarPage />
       // <PostsPage />
       // <ActivitiesPage />
